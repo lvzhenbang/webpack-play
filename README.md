@@ -7,3 +7,10 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 ### 初探
 
 [webpack 入门](https://github.com/lvzhenbang/webpack-learning/blob/master/doc/first/index.md)
+
+
+### LICENSE
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2018-1-11 present, Zhenbang Lv
