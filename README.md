@@ -8,6 +8,15 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 [webpack 入门](https://github.com/lvzhenbang/webpack-learning/blob/master/doc/first/index.md)
 
+[使用webpack构建一个项目(引入第三方库)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first.md)
+
+[如何使用 loader 处理非js文件（上）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/loader.md)
+
+#### 运行项目
+
+```
+webpack 打包编译
+```
 
 ### LICENSE
 

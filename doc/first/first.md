@@ -1,5 +1,7 @@
 ## webpack 项目打包实践
 
+学习webpack之前，建议各位对node.js和npm有一定的了解。
+
 ### 安装
 
 	npm install -g webpack
@@ -156,18 +158,8 @@ module.exports = function() {
 
 	webpack
 
-[参考源代码]()
+[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-1)
 
 我们知道webpack只能处理JavaScript文件，而不能处理其他类型的文件，包括css，html模板，字体，TypeScript等等。但是我们可以通过相应的一系列loader就可以处理这些文件了。
 
-### loader
-
-loader 的作用就是将一些webpack不能处理的文件进行编译，然后转变成webpack能够处理的文件。
-
-在项目中安装webpack命令：
-
-我们首先要使用 'cd' 命令进入要使用webpack的项目根目录，输入如下命令：
-	
-	npm init
-
-这样会自动生成一个 `package.json` 文件
+[如何使用 loader 处理非js文件（上）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/loader.md)

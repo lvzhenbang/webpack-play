@@ -82,3 +82,5 @@ webpack 提供了多种构建目标，让我们可以方便我们服务器和浏
 	module.exports = [ serverConfig, clientConfig ];
 
 webpack 不支持向 target 传入多个字符串， 但2我们可以打包两份分离的配置来创建同构的库。
+
+[使用webpack构建一个项目(引入第三方库)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first.md)
