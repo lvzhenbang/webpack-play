@@ -1,7 +1,7 @@
 {
   "name": "example-2",
   "version": "1.0.0",
-  "description": "this is example-2",
+  "description": "this is a example-2",
   "main": "main.js",
   "scripts": {
     "test": "webpack"
