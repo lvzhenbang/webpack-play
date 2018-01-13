@@ -12,14 +12,11 @@
 
 [使用webpack构建一个项目(引入第三方库)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first.md)
 
-### 运行项目
+#### 运行项目
 
 ```
-npm install 安装依赖
-
-npm run test 打包编译
+webpack 打包编译
 ```
-
 
 ### LICENSE
 
