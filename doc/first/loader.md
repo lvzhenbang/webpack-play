@@ -309,4 +309,4 @@ module.exports = {
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-2)
 
-[webpack处理非css文件(下)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-extend.md)
+[webpack处理非css文件(中)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-extend.md)

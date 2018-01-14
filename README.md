@@ -12,6 +12,10 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 [如何使用 loader 处理非js文件（上）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/loader.md)
 
+[如何使用 loader 处理非js文件 (中)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-extend.md)
+
+[如何使用 loader 处理非js文件（下）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/postcss.md)
+
 ### LICENSE
 
 [MIT](https://opensource.org/licenses/MIT)
