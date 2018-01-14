@@ -1,0 +1,59 @@
+.my-box {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+    font-size: 42px;
+    line-height: 100px;
+    color: #333;
+    border: 1px solid #ccc;
+    transition: font-size 0.25s ease-out 0s;
+    &:hover {
+        font-size: 100px;
+    }
+}
+
+.icon-add {
+    background-image: url('./images/l-add.png');
+    background-repeat: no-repeat;
+}
+
+.icon-basic {
+    background-image: url('./images/l-basic.png');
+    background-repeat: no-repeat;
+}
+
+.icon-blda {
+    background-image: url('./images/l-blda.png');
+    background-repeat: no-repeat;
+}
+
+.icon-callback {
+    background-image: url('./images/l-callback.png');
+    background-repeat: no-repeat;
+}
+
+.icon-camera {
+    background-image: url('./images/l-camera.png');
+    background-repeat: no-repeat;
+}
+
+.icon-card {
+    background-image: url('./images/l-card.png');
+    background-repeat: no-repeat;
+}
+
+.icon-cart {
+    background-image: url('./images/l-cart.png');
+    background-repeat: no-repeat;
+}
+
+.icon-close {
+    background-image: url('./images/l-close.png');
+    background-repeat: no-repeat;
+}
