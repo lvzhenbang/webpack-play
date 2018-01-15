@@ -21,3 +21,5 @@ new HtmlWebpackPlugin({
 	filename：'index.html' // 设置文件名字
 	template: './template/index.html', //使用模板
 })
+
+[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-6)
