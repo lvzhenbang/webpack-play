@@ -1,12 +1,16 @@
-## 打包实践（loader）
+## 打包实践 (commonschunkplugin)
 
 ### 主要内容
 
-讲解了  `sass-loader` 和 `less-loader` 以及 `stylus-loader` 这些用来处理我们常见的三种扩展语言。
+讲解了  `CommonsChunkPlugin` 插件分离各模块的公共模块的两种常见形式：
+
+name, filename
+
+names, minchunks
 
 具体说明请参考：
 
-[如何使用 loader 处理非js文件（中）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css=extend.md)
+[webpack 插件 commonschunkplugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/commonschukplugin.md)
 
 ### 运行项目
 
