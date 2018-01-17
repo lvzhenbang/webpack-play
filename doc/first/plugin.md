@@ -24,13 +24,13 @@ UglifyjsWebpackPlugin //
 
 DllPlugin // 减少打包构建的时间
 
+ProvidePlugin // 不必通过import/require使用模块
+
 
 #### webpack 外载插件
 
 HotModuleRepalcementPlugin // 启用热交换
 
 HtmlWebapckPlugin // 创建简单的HTML，用于服务器的访问
-
-ProvidePlugin // 不必通过import/require使用模块
 
 ExtractTextWebpackPlugin // 从打包后的js中分理处css到单独的文件
