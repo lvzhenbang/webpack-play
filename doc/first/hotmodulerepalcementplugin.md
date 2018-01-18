@@ -1,5 +1,4 @@
 ## hotmodulerepalcementplugin
 
-`HotModuleRepalcementPlugin` 是一个热替换插件，也就是在我们开发应用时修改代码模块，然后保存时浏览器刷新页面就可以自动执行。尤其时我们修改应用代码的样式时，可以看到实时的效果。
+`HotModuleRepalcementPlugin` 是一个webpack内置的热替换插件，这个模块不单独使用，它的使用是用来开启全局的HMR，将打包编译后的更新通知，推送给服务器。
 
-###
