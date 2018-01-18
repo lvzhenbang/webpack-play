@@ -20,17 +20,22 @@ webpack的插件按照引入的形式可分为外部引入和内部内置的两�
 
 [CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/commonschunkplugin.md) // 提取共享的通用模块
 
-UglifyjsWebpackPlugin // 
+[UglifyjsWebpackPlugin]() // 
 
-DllPlugin // 减少打包构建的时间
+[DllPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/dllplugin&dllreferenceplugin.md) // 减少打包构建的时间
 
-ProvidePlugin // 不必通过import/require使用模块
+[ProvidePlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/provideplugin.md) // 不必通过import/require使用模块
 
 
 #### webpack 外载插件
 
-HotModuleRepalcementPlugin // 启用热交换
+[HotModuleRepalcementPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/hmrplugin.md) // 启用热交换
 
-HtmlWebapckPlugin // 创建简单的HTML，用于服务器的访问
+[HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/htmlwebpackplugin.md) // 创建简单的HTML，用于服务器的访问
 
-ExtractTextWebpackPlugin // 从打包后的js中分理处css到单独的文件
+[ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/postcss.md) // 从打包后的js中分理处css到单独的文件
+
+
+#### 工具
+
+[webpack-dev-server](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/hmrplugin.md)
