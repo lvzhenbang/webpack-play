@@ -42,14 +42,14 @@ loader 的作用就是将一些webpack不能处理的文件进行编译，然后
 
 ### 常用loader
 
-[css-loader & style-loader 的联系与区别](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-style-loader.md)
+[css-loader & style-loader 的联系与区别](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
 
-[其它常见处理css扩展语言的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-extend.md)
+[其它常见处理css扩展语言的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-extend.md)
 
-[postcss一个处理css模块的插件平台](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/postcss.md)
+[postcss一个处理css模块的插件平台](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md)
 
-[处理图片，字体等资源所需要的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/ohter-file-loader.md)
+[处理图片，字体等资源所需要的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/ohter-file-loader.md)
 
 ### 特殊的loader
 
-[babel-loader 让ES6转化为ES5](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/babel-loader.md)
+[babel-loader 让ES6转化为ES5](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/babel-loader.md)
