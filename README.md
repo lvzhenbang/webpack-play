@@ -15,32 +15,32 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 <details>
 <summary>目录</summary>
 
-[css-loader & style-loader 的联系与区别](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-style-loader.md)
+[css-loader & style-loader 的联系与区别](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
 
-[其它常见处理css扩展语言的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-extend.md)
+[其它常见处理css扩展语言的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-extend.md)
 
-[postcss一个处理css模块的插件平台](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/postcss.md)
+[postcss一个处理css模块的插件平台](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md)
 
-[处理图片，字体等资源所需要的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/ohter-file-loader.md)
+[处理图片，字体等资源所需要的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/ohter-file-loader.md)
 
 </details>
 
 #### 特殊的loader
 
-[babel-loader 让ES6转化为ES5](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/babel-loader.md)
+[babel-loader 让ES6转化为ES5](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/babel-loader.md)
 
 #### webpack 内置插件
 
 <details>
 <summary>目录</summary>
 
-[CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/commonschunkplugin.md) // 提取共享的通用模块
+[CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/commonschunkplugin.md) // 提取共享的通用模块
 
 [UglifyjsWebpackPlugin]() // 
 
-[DllPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/dllplugin&dllreferenceplugin.md) // 减少打包构建的时间
+[DllPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/dllplugin&dllreferenceplugin.md) // 减少打包构建的时间
 
-[ProvidePlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/provideplugin.md) // 不必通过import/require使用模块
+[ProvidePlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/provideplugin.md) // 不必通过import/require使用模块
 
 </details>
 
@@ -49,17 +49,17 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 <details>
 <summary>目录</summary>
 
-[HotModuleRepalcementPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/hmrplugin.md) // 启用热交换
+[HotModuleRepalcementPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/hmrplugin.md) // 启用热交换
 
-[HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/htmlwebpackplugin.md) // 创建简单的HTML，用于服务器的访问
+[HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/htmlwebpackplugin.md) // 创建简单的HTML，用于服务器的访问
 
-[ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/postcss.md) // 从打包后的js中分理处css到单独的文件
+[ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md) // 从打包后的js中分理处css到单独的文件
 
 </details>
 
 #### 其它
 
-[自定义实现 webpack-dev-server ](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/custom-HMR.md)
+[自定义实现 webpack-dev-server ](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/custom-HMR.md)
 
 ### LICENSE
 
