@@ -52,4 +52,4 @@ loader 的作用就是将一些webpack不能处理的文件进行编译，然后
 
 ### 特殊的loader
 
-[babel-loader 让ES6转化为ES5]()
+[babel-loader 让ES6转化为ES5](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/babel-loader.md)
