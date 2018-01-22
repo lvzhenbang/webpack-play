@@ -6,7 +6,7 @@
 
 具体说明请参考：
 
-[webpack 如何引入并使用eslint](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/babel-eslint.md)
+[webpack 如何引入并使用eslint](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/babel-eslint.md)
 
 ### 运行项目
 
