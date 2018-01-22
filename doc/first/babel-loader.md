@@ -206,7 +206,7 @@ entry: {
 
 ```
 {
-	"presets": ["es2015", "es-stage-2"],
+	"presets": ["es2015", "stage-2"],
 	"plugins": ["transform-runtime"]
 }
 ```
