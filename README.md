@@ -61,6 +61,9 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 [自定义实现 webpack-dev-server ](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/custom-HMR.md)
 
+[webpack 如何引入并使用eslint](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/babel-eslint.md)
+
+
 ### LICENSE
 
 [MIT](https://opensource.org/licenses/MIT)
