@@ -42,6 +42,8 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 [ProvidePlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/provideplugin.md) // 不必通过import/require使用模块
 
+[HotModuleRepalcementPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/hmrplugin.md) // 启用热交换
+
 </details>
 
 #### webpack 外载插件
@@ -49,11 +51,11 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 <details>
 <summary>目录</summary>
 
-[HotModuleRepalcementPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/hmrplugin.md) // 启用热交换
-
 [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/htmlwebpackplugin.md) // 创建简单的HTML，用于服务器的访问
 
 [ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md) // 从打包后的js中分理处css到单独的文件
+
+[webpackMerge](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/webpack-merge.md) // 合并配置项
 
 </details>
 
