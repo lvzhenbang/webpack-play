@@ -3,7 +3,7 @@ module.exports = {
 		app: './main.js'
 	},
 	externals: {
-		jquery: 'window.$'
+		'jquery': 'jQuery'
 	},
 	output: {
 		filename: '[name].js'

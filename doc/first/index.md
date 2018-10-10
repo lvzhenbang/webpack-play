@@ -1,5 +1,11 @@
 ## webpack 入门
 
+### webpack 是什么？
+
+webpack 既是一个构建系统，也是一个打包工具。
+
+我们可以通过webpack来构建一个前端开发环境，然后并将项目内容进行打包。
+
 ### webpack介绍
 
 webpack 是高度可配置的，所以在学习使用前我们需要先理解它的四个核心概念：
@@ -7,6 +13,10 @@ webpack 是高度可配置的，所以在学习使用前我们需要先理解它
 * 入口（entry）
 
 它是构建内部依赖图的开始。可以定义一个入口起点，也可以定义多个入口起点。
+
+* 输出（output）
+
+这里输出webpack他所创建的打包文件(bundles)。我们可以通过 `output.filename` 和 `output.path` 来指定打包（bundles）的文件名以及输出路径。
 
 * loader 
 
@@ -26,10 +36,6 @@ webpack的插件接口功能很强大。
 使用插件前我们需要用 `require()` 引入该插件，然后将它添加到插件数组中。一个插件，可以被多次引入一个配置文件中，但要用于不同的目的。使用插件我们只需要创建它的一个实例即可，并且可以设置自定义参数。
 
 
-* 输出（output）
-
-这里输出webpack他所创建的打包文件(bundles)。我们可以通过 `output.filename` 和 `output.path` 来指定打包（bundles）的文件名以及输出路径。
-
 ### 依赖图
 
 webpack 从入口开始递归的创建依赖图，使用loader将一些webpack不能处理的文件转换为webpack能处理的文件添加到依赖图中，最后的出口根据依赖图来进行文件打包，插件在这里起到强化webpack功能的作用。
@@ -40,7 +46,7 @@ webpack可以通过如下方式表达模块间的依赖关系。
 * require 语句 （commonJS）
 * define 和 require 语句 （AMD）
 * @import 语句 （css/sass/less） 
-* url(...) 或 <img src="..." >
+* url(...) 或 `<img src="..." >`
 
 ### 模块
 
@@ -60,6 +66,7 @@ webpack支持的模块类型有：
 
 webpack 提供了多种构建目标，让我们可以方便我们服务器和浏览器代码的编写。
 
+```
 	var path = require('path');
 	var serverConfig = {
 	  target: 'node',
@@ -80,7 +87,7 @@ webpack 提供了多种构建目标，让我们可以方便我们服务器和浏
 	};
 
 	module.exports = [ serverConfig, clientConfig ];
-
+```
 webpack 不支持向 target 传入多个字符串， 但2我们可以打包两份分离的配置来创建同构的库。
 
-[使用webpack构建一个项目(引入第三方库)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first.md)
+下一篇：[最简单的webpack使用](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/simple.md)

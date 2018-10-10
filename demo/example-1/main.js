@@ -1,1 +1,3 @@
-require('./module.js')();
+import module from './module';
+
+module()
