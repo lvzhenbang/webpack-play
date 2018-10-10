@@ -1,4 +1,4 @@
-## uglifyjsplugin 压缩js代码插件
+## uglifyjsplugin 压缩代码插件
 
 uglifyjsplugin 它是webpack的内置插件（webpack.optimize.UglifyJSPlugin）,可以对我们要输出的js代码进行压缩。但是在开发中为了使用最新版本的UglifyJS，我们往往会独立安装。
 
