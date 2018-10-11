@@ -1,55 +1,54 @@
 ## loader
 
-loader 的作用就是将一些webpack不能处理的文件进行编译，然后转变成webpack能够处理的文件。
+loader 的作用就是将一些非js的静态资源（模块文件）转换为js模块文件，然后在进行编译处理，使之变成webpack可以处理的代码。
 
-在讲述loader之前，先来介绍如何在项目中安装webpack，而非在全局环境安装webpack。原因就是在开发中是团队合作，每个人的电脑上的webpack开发环境不一样，为了使项目的环境一致，很多项目都选择在项目中引入webpack。
+如果我们需要处理某一类型的资源，我们该怎么做？
 
-### 项目中引入webpack
-
-项目目录结构：
+首先，需要安装相应的loader，比如：`*.json` 文件:
 
 ```
-/eaxmple-2
-  |--index.html
-  |--main.js
-  |--module.js
-  |--webpack.config.js
+npm install --save-dev json-loader
 ```
 
-内容和example-1一样。下面就介绍不一样的地方。
+其次，我们需要在 `webpack.config.js` 的module 配置项中添加如下代码：
 
-首先，要使用 'cd' 命令进入要使用webpack的项目根目录，输入如下命令：
-	
-	npm init
+```
+module.exports = {
+  ...
+  module: {
+    rules: [
+      {
+        test: /\.json$/,
+        use: 'json-loader'
+      }
+    ]
+  }
+  ...
+}
+```
 
-在控制台中会提示你输入项目名称、项目描述，接下来就会提示你打包项目的入口文件，默认是 `main.js` ，如果你的项目命名的入口文件名刚好是这个名字，你直接按回车键即可，否则输入你命名的入口文件名。
-紧接着就会提示你输入测试命令，可拷贝项目的地址，项目的关键词，项目的所有者，项目的LICENSE，然后按回车键你将可以看到配置文件预览信息。如果确定输入yes，这样会自动生成一个 `package.json` 文件。
+module这个配置项来添加各种 `rule` 的预处理的配置。因此有 `rules` 这样一个规则数组，数组里边不同元素对象是针对不同类型文件的loader的配置项，`test` 用来过滤项目目下的指定类型文件， `use` 指定使用的loader，`use` 的属性值也可以是一个数组，数组里的loader具有依赖关系，前面的依赖后面的，比如：处理sass文件时，`['style-loader', 'css-loader', 'sass-loader' ]` ，它的顺序就必须是这样，那个loader最先被使用，就要将loader，放在最后的位置，其他的以此类推。
 
-然后，为项目添加 `webpack` 依赖，命令如下：
+当然，我们常用的loader就那么些，如何分类呢？
 
-	npm install webpack --save-dev
-
-
-最后，在控制台输入如下命令：
-
-	webpack
-
-到了这里可能就要结束了，但细心的同学会留意到在创建 `package.json` 文件中的 `test` 测试命令是什么，我们在做复杂项目时不用使用webpack，可以使用统一风格的 `npm` 命令。
-
-所以，如果在生成 `package.json` 文件过程中，在需要输入 `test command` 的时候，我们输入 `webpack` ，那么我们在控制台输入 `npm run test` 一样可以进行打包。
-
-好了，这样就搞定了在项目中添加webpack依赖。
+* 处理css样式文件，我们用style-loader, css-loader, 针对其扩展语言我们用sass-loader, less-loader, stylus-loader；
+* 处理js文件，我们一般不用loader，webpack本身支持的就是对js的处理，但是我们用js的扩展语言，我们就需要相应的loader，如coffee-loader(COffeeScript), ts-loader(TypeScript)，如果我们的项目中使用了js的新语法特性，不如现在的es6，我们就需要babel-loader。
+* 语法检测，规范开发的格式，我们就需要相应的loader，js文件eslint-loader（jshint-loader）, css文件stylelint-loader。
+* 模板，如果要使用不同的html预处理语言，我们就要使用响应的loader，如pug(pug-loader), markdown(markdown-loader)
+* 框架，如现在流行vue.js（vue-loader）, angular2(angular2-template-loader)
+* 测试loader，如mocha(mocha-loader)
 
 ### 常用loader
 
-[css-loader & style-loader 的联系与区别](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
+* [css-loader & style-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
+* [处理资源（如：图片，字体等）的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/ohter-file-loader.md)
+* [css扩展语言(sass, less, stylus等)的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-extend.md)
+* [babel-loader 让ES6转化为ES5](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/babel-loader.md)
 
-[其它常见处理css扩展语言的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-extend.md)
 
-[postcss一个处理css模块的插件平台](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md)
+### 其他的loader
 
-[处理图片，字体等资源所需要的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/ohter-file-loader.md)
+* [语法检测的eslint-loader(文件类型：*.js)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/eslint-loader.md)
+* [语法检测的stylelint-loader(文件类型：*.css)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/stylelint-loader.md)
+* [postcss一个处理css模块的插件平台](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md)
 
-### 特殊的loader
-
-[babel-loader 让ES6转化为ES5](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/babel-loader.md)

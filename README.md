@@ -8,6 +8,7 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 * [webpack 入门](https://github.com/lvzhenbang/webpack-learning/blob/master/doc/first/index.md)
 * [引入第三方库](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/third-party.md)
+* [loader入门](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/loader.md)
 
 #### 常用loader
 
@@ -15,14 +16,17 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 <summary>目录</summary>
 
 * [css-loader & style-loader 的联系与区别](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
-* [其它常见处理css扩展语言的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-extend.md)
-* [处理图片，字体等静态资源的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/ohter-file-loader.md)
+* [css扩展语言(sass, less, stylus等)的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-extend.md)
+* [处理资源（如：图片，字体等）的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/ohter-file-loader.md)
 * [编译ES6为ES5的babel-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/babel-loader.md)
-* [语法检测的eslint-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/eslint-loader.md)
+
 
 </details>
 
 #### 其他的loader
+
+* [语法检测的eslint-loader(文件类型：*.js)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/eslint-loader.md)
+* [语法检测的stylelint-loader(文件类型：*.css)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/stylelint-loader.md)
 
 * [postcss一个处理css模块的插件平台](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md)
 
