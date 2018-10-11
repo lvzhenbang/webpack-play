@@ -9,6 +9,7 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 * [webpack 入门](https://github.com/lvzhenbang/webpack-learning/blob/master/doc/first/index.md)
 * [引入第三方库](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/third-party.md)
 * [loader入门](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/loader.md)
+* [plugin入门](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/plugin.md)
 
 #### 常用loader
 
