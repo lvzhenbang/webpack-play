@@ -58,6 +58,7 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 #### 其它
 
 * [自定义实现 webpack-dev-server ](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/custom-HMR.md)
+* [webapck常见使用问题](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/other/doc.md)
 
 ### LICENSE
 
