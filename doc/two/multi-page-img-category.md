@@ -165,8 +165,98 @@ gif图片一般使用小图，如果是大图会记号浏览器性能，还不�
 
 注意：`iamge-webpack-loader`，要先对所有的图片进行优化处理，然后再用其他loader处理。loader的执行顺序，如果你是`style-loader!css-loader!sass-loader"`使用，它是从右到左方向先后执行，如果你是在配置文件中的`rules: [...]`数组中，它也是从右到左的方向执行，如果你将所有的loader规则有回车符号隔开，那么它就是自下而上的执行。
 
+## 一类特殊的图片引用
+
+针对`<img src="...">`的图片使用，`ul-loader`是不会处理html中的img引用，现在处理这样情况的loader或插件，也并没有一个比较出名的。现在通用的做法就是将图片拷贝一份到生成目录中，[`copy-webpack-plugin`](https://www.npmjs.com/package/copy-webpack-plugin)。参考配置代码如下：
+
+```
+new CopyWebpackPlugin([
+  {
+  from: path.resolve(__dirname, 'assets/imgs/other/'),
+  to: path.resolve(__dirname, 'dist/assets/imgs/other/'),
+  ignore: ['.*']
+  }
+]),
+```
+
+但这样，会带来另一个问题就是图片的优化问题，如何使用 `image-webpack-loader`？本来的目的是对项目中使用到的所有的图片进行优化，而现在只能对`base64`和`sprite`目录下的图片进行优化处理。不过，不要慌，可以通过创建一个新的npm脚本命令(本是里使用的是`npm run img`)来对图片进行压缩处理，新建了一个目录`static`用来保存优化前的图片，`ohter`用来保存优化后的图片。
+
+首先，需要安装`imagemin`, `imagemin-mozjpeg`, `imagemin-optipng`, `imagemin-gifsicle` :
+
+···
+yarn add imagemin imagemin-mozjpeg imagemin-optipng imagemin-gifsicle --dev
+···
+
+然后，在项目的根目录添加一个优化图片的文件`optzing-img.js`，代码如下：
+
+```
+const path = require('path')
+const imagemin = require('imagemin');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminOptipng = require('imagemin-optipng');
+const imageminGifsicle = require('imagemin-gifsicle');
+
+(async () => {
+	await imagemin(
+    [
+      path.resolve(__dirname, 'src/assets/imgs/static/*.jpg'),
+      path.resolve(__dirname, 'src/assets/imgs/static/*.png'),
+      path.resolve(__dirname, 'src/assets/imgs/static/*.gif')
+    ],
+    path.resolve(__dirname, 'src/assets/imgs/other/'),
+    {
+      use: [
+        imageminMozjpeg(),
+        imageminOptipng(),
+        imageminGifsicle()
+      ]
+    }
+  );
+
+	console.log('图片优化完成！');
+})();
+```
+
+最后，在`package.json`文件中添加如下的npm命令：
+
+```
+...
+"scripts": {
+    ...
+    "img": "node optzing-img.js"
+  },
+...
+```
+
+在控制输入`npm run img`，然后按下回车键就可以得到你所需要的。
+
+注：既然重新定义了图片优化的npm脚本命令，那么，是否需要去掉之前在`webpack.config.js`中的`image-webpakc-loader`，当然不需要。主要有两个原因，一个是`sprite雪碧图`它是用几张小图片合成了一张大图片，这张合成的图片还需要优化；另一个是因为本项目对于存放图片的目录进行了细化。
+
+## 字体
+
+在web开发中，自定义的字体也是比较常见的，在webpack中它的处理和图片类似，都是使用的 `url-loader` 和 `file-loader`。参考代码如下：
+
+```
+...
+{
+  include: path.resolve(__dirname, 'assets/fonts/'),
+  test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+  use: [{
+    loader: 'url-loader',
+    options: {
+      limit: 10000,
+      name:  isDev ? '[name].[ext]' : '[name].[hash].[ext]',
+      outputPath: 'assets/fonts/'
+    }
+  }]
+},
+...
+```
+
+新创建了一个`fonts`目录又来存放项目开发过程中使用的字体。
+
 ## 源代码
 
 [webpack4.x multi-page](https://github.com/lvzhenbang/webpack4.x-multi-page)
 
-此后，webpack构建多页面应用系列文章的源代码，都在这个github项目中，[webpack3.x multi-page](https://github.com/lvzhenbang/webpack3.x-multi-page)不在维护。
+此后，webpack构建多页面应用系列文章的源代码，都在这个github项目中，[webpack3.x multi-page](https://github.com/lvzhenbang/webpack3.x-multi-page)不再维护。
