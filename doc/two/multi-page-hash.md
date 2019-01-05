@@ -56,7 +56,7 @@ plugins: plugins.concat([
 
 ## 为什么要在多页面应用中使用单页面应用的hash来实现路由的控制
 
-![最终的效果](https://github.com/lvzhenbang/webpack-learning/tree/master/imgs/aimate.gif)
+![最终的效果](https://github.com/lvzhenbang/webpack-learning/tree/master/imgs/animate.gif)
 
 很明显的一点是传统的多页面应用的业务模块往往会出现多个页面之间会有很多相同内容，这样在单击导航实现路由切换的时候，总是会看到相同的内容，这样会给用户造成一种错觉‘为什么总是同一个页面’。这样的用户体验往往不好。最突出的就是包含二级导航的页面。（可参考[圣捷集团的官网](http://www.sjcf.com.cn/zjsj-sjtz.html)）
 
@@ -78,7 +78,7 @@ plugins: plugins.concat([
 
 具体的实现过程如下：
 
-在生成子导航的模拟数据中添加了一个`type`值，
+在生成子导航的模拟数据中添加了一个`type`值。
 
 ```
 tabs: [
