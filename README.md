@@ -84,6 +84,8 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 * [构建多页面应用——模板](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/multi-page-template.md)
 * [构建多页面应用——静态资源](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/multi-page-assets.md)
 * [构建多页面应用——优化（一）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/multi-page-function.md)
+* [构建多页面应用——hash](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/multi-page-hash.md)
+* [构建多页面应用——优化（二）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/multi-page-mockdata.md)
 
 ### LICENSE
 
