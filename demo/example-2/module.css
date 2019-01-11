@@ -1,0 +1,21 @@
+.my-box {
+    width: 200px;
+    height: 30px;
+    color: #fff;
+    border: 1px solid #ccc;
+    background: url('./bg.jpg') center center;
+}
+
+.icon{
+  font-size: 42px;
+  line-height: 100px;
+  margin: 10px 0;
+  color:#333;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+
+}
+.icon:hover{
+  font-size: 100px;
+}

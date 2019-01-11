@@ -1,0 +1,23 @@
+{
+  "name": "splitchunkplugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "webpack --env production"
+  },
+  "keywords": [
+    "webpack",
+    "demo"
+  ],
+  "author": "lvzhenbang",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "underscore": "^1.9.1"
+  }
+}
