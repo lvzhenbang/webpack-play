@@ -1,16 +1,12 @@
-## 打包实践 (commonschunkplugin)
+## 打包实践 
 
 ### 主要内容
 
-讲解了  `CommonsChunkPlugin` 插件分离各模块的公共模块的两种常见形式：
-
-name, filename
-
-names, minchunks
+讲解了压缩 `lodash` 代码
 
 具体说明请参考：
 
-[webpack 插件 commonschunkplugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/commonschukplugin.md)
+[压缩lodash](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/lodashwebpackplugin.md)
 
 ### 运行项目
 
