@@ -1,0 +1,28 @@
+{
+  "name": "compress-lodash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "webpack --env production"
+  },
+  "keywords": [
+    "webpack",
+    "demo"
+  ],
+  "author": "lvzhenbang",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-lodash": "^3.3.4",
+    "lodash-webpack-plugin": "^0.11.5",
+    "node-sass": "^4.7.2",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
