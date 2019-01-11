@@ -41,18 +41,22 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 </details>
 
-#### webpack 内置插件
+#### webpack4.x之前版本内置插件
 
 <details>
 <summary>目录</summary>
 
-* [CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/commonschunkplugin.md) // 提取共享的通用模块
+* [CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/commonschunkplugin.md) // 提取文件块中的共用代码
 * [UglifyjsWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/uglifyjsplugin.md) // 压缩编译后的模块
 * [DllPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/dllplugin&dllreferenceplugin.md) // 减少打包构建的时间
 * [ProvidePlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/provideplugin.md) // 不必通过import/require使用模块
 * [HotModuleRepalcementPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/hmrplugin.md) // 启用热交换
 
 </details>
+
+#### webpack4.x 内置插件
+
+* [SplitChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/splitchunkplugin.md) // 提取各模块间的共用代码，它替代了`CommonsChunkPlugin`插件
 
 #### webpack 外载插件
 
