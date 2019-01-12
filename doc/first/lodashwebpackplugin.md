@@ -2,10 +2,15 @@
 
 `lodash`作为一个比较常用的前端开发工具集，在使用webpack进行`vendor`分离的实践中，会遇到将整个`lodash`文件分离到`vendor.js`的问题。这样会使`vendor.js`文件变得特别大。
 
-`webpack.config.js`文件代码如下：
+### 初始化`wepback.config.js`
+
+为了在浏览器中展示demo。
+
+`webpack.config.js`的配置文件代码如下:
 
 ```
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = mode => {
     return {
@@ -13,6 +18,9 @@ module.exports = mode => {
             A: './moduleA.js',
             B: './moduleB.js',
             C: './moduleC.js',
+        },
+        devServer: {
+            open: true
         },
         mode: mode,
         output: {
@@ -39,13 +47,22 @@ module.exports = mode => {
                 }
             }
         },
-        module: { },
-        plugins: [ ]
+        module: {
+        },
+        plugins: [
+            new HtmlWebpackPlugin()
+        ]
     }
 }
 ```
 
-运行`npm run test`脚本命令，结果如下：
+`html-webpack-plugin`的使用可参考[html-wepback-plugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/htmlwebpackplugin.md)这篇文章。
+
+`optimization`配置项可参考[SplitChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/splitchunkplugin.md)这篇文章。
+
+
+
+运行`npm run dev`脚本命令，结果如下：
 
 ```
 Hash: 5d86af7ed04c57cca071
@@ -100,7 +117,7 @@ module: {
 ...
 ```
 
-运行`npm run test`，脚本命令结果如下：
+运行`npm run dev`，脚本命令结果如下：
 
 ```
 Hash: 30def5521978552cc93d
@@ -144,7 +161,7 @@ plugins: [
 ...
 ```
 
-运行`npm run test`脚本命令，结果如下所示：
+运行`npm run dev`脚本命令，结果如下所示：
 
 ```
 Hash: 30def5521978552cc93d
@@ -168,4 +185,4 @@ Entrypoint C = vendor.js commons~A~B~C.js commons~A~C.js C.js
 一般情况下，不使用`lodash-webpack-plugin`就可以满足开发的需要，但是文件特别大的情况下，建议还是使用它。
 
 
-[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-13)
+[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-14)
