@@ -2,20 +2,16 @@
 
 ### 主要内容
 
-讲解了 `webpack.config.js` 文件的组成；
-
-讲解了如何使用 `externals` 引入第三方库。
+讲解了 `webpack.config.js` 文件的组成
 
 具体说明请参考：
 
-[webpack 入门配置](https://github.com/lvzhenbang/webpack-learning/blob/master/doc/first/index.md)
-
-[使用webpack构建一个项目(引入第三方库)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first.md)
+[webpack 最小配置文件](https://github.com/lvzhenbang/webpack-learning/blob/master/doc/first/index.md)
 
 #### 运行项目
 
 ```
-webpack 打包编译
+npm run test // 编译输出
 ```
 
 ### LICENSE

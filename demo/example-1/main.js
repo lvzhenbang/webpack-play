@@ -1,3 +1,1 @@
-import module from './module';
-
-module()
+document.write('hello webapck.')
