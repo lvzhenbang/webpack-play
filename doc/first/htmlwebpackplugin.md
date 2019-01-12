@@ -1,25 +1,49 @@
 ## htmlwebpackplugin
 
-可以生成简单的html文件，也可以使用hml模板，
+它可以生成html文件，用来在浏览器中测试demo。在`html-wepback-plugin`也可以使用html模板，用来生成html文件。
 
 ### 配置项
 
-安装 `html-webpack-plugin` 插件：
-	
-	npm install --save-dev html-webpack-plugin
+首先，安装 `html-webpack-plugin` 依赖：
 
+```
+npm install --save-dev html-webpack-plugin
+```
 
-在 `webpack.config.js` 文件开始引入 `HtmlWebpackPlugin` 插件；
+然后，在 `webpack.config.js` 文件开始引入 `HtmlWebpackPlugin` 插件；
 
+```
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+...
+```
 
 
-在 `webpack.config.js` 的 `plugins` 中添加：
+紧接着，在 `webpack.config.js` 的 `plugins` 中添加如下的代码，来使用它：
 
+```
+...
 new HtmlWebpackPlugin({
 	title: 'webapck-demo', // 设置文件的title
 	filename：'index.html' // 设置文件名字
 	template: './template/index.html', //使用模板
 })
+...
+```
+
+### 自启动浏览器
+
+在`webpack.config.js`文件中添加如下代码：
+
+```
+...
+devServer: {
+		open: true
+},
+...
+```
+
+注：自从`html-wepback-plugin@3.0.0`开始，webpack需要4.0以上的版本。在webpack4.0开始将webpack分为了`wepback`和`wepback-cli`。所以，安装webpack4.x需要执行`yarn add wepback webpack-cli`的命令。
+
+注：从`html-wepback-plugin@4.0.0`开始，引入了`./lib/html-tag.js`，使用它可以定义生成`<meta name="author" content="lzb">`，可参考[multi-page-wepback4.x](https://github.com/lvzhenbang/webpack4.x-multi-page)。
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-6)
