@@ -13,16 +13,16 @@ module.exports = mode => {
             usedExports: true,
             splitChunks: {
                 cacheGroups: {
+                    chunks: "initial",
                     commons: {
-                        chunks: 'all',
+                        name: 'commons',
                         minChunks: 2,
                         maxInitialRequests: 5,
                         minSize: 0
                     },
                     vendor: {
-                        test: /node_modules/,
-                        chunks: "initial",
                         name: "vendor",
+                        test: /node_modules/,
                         priority: 10,
                         enforce: true
                     }
@@ -30,9 +30,6 @@ module.exports = mode => {
             }
         },
         module: {},
-        externals: {
-            jquery: 'window.$'
-        },
         plugins: [
             // new webpack.optimize.CommonsChunkPlugin({
             //     names: ['common'],
