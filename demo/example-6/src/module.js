@@ -1,8 +1,4 @@
-var $ = require('jquery');
-require('./module.scss');
+require('./module.css');
 module.exports = function() {
-	// 引入第三方库
-	$('<div/>').addClass('my-box')
-		.html('webpack 引入第三方库。')
-		.appendTo($('body'));
+	document.write('hello webpack.')	
 }
