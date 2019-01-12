@@ -1,8 +1,8 @@
 import {join} from 'lodash'
 
-module.exports = function (){
-	let arr = ['a', 'b']
-
+export default function (){
+	let arr = ['a', 'b'];
 	console.log('this a module of a1', join(arr, '~'));
-
+	document.body.style.fontSize = '36px';
+	document.write('hello world.');
 }

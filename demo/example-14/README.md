@@ -1,19 +1,21 @@
-## 打包实践 
+## 打包实践 (compress-lodash)
 
 ### 主要内容
 
-讲解了压缩 `lodash` 代码
+对常用的[lodash](https://github.com/lodash/lodash)进行代码压缩。
 
 具体说明请参考：
 
-[压缩lodash](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/lodashwebpackplugin.md)
+[babel-plugin-lodash & lodash-webpack-plugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/lodashwepbackplugin.md)
 
 ### 运行项目
 
 ```
-npm install 安装依赖
+yarn  // 安装依赖
 
-npm run test 打包编译
+npm run dev // 开发模式
+
+npm run build // 发布模式
 ```
 
 

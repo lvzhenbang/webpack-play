@@ -1,7 +1,8 @@
 var path = require('path');
-var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = mode => {
+    let isDev = mode !== 'production' ? true : false;
     return {
         entry: {
             A: './moduleA.js',
@@ -9,29 +10,28 @@ module.exports = mode => {
             C: './moduleC.js',
         },
         mode: mode,
-        output: {
-            path: path.resolve(__dirname, 'dist/'),
-            filename: '[name].js'
-        },
         optimization: {
-            usedExports: true,
             splitChunks: {
+                chunks: 'initial',
                 cacheGroups: {
                     commons: {
-                        chunks: 'all',
+                        name: 'commons',
                         minChunks: 2,
                         maxInitialRequests: 5,
-                        minSize: 0
+					    minSize: 0
                     },
                     vendor: {
-                        test: /node_modules/,
-                        chunks: "initial",
                         name: "vendor",
+                        test: /node_modules/,
                         priority: 10,
                         enforce: true
                     }
                 }
             }
+        },
+        output: {
+            path: path.resolve(__dirname, 'dist/'),
+            filename: '[name].js'
         },
         module: {
             rules: [
@@ -49,7 +49,9 @@ module.exports = mode => {
             ]
         },
         plugins: [
-            new LodashModuleReplacementPlugin,
+            new HtmlWebpackPlugin({
+                chunks: ['commons', 'vendor', 'A']
+            })
         ]
     }
 }

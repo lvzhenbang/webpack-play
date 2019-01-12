@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "webpack --env production"
+    "dev": "webpack-dev-server --env development",
+    "build": "webpack --env production"
   },
   "keywords": [
     "webpack",
@@ -17,10 +18,11 @@
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.5",
     "babel-plugin-lodash": "^3.3.4",
+    "html-webpack-plugin": "^3.2.0",
     "lodash-webpack-plugin": "^0.11.5",
-    "node-sass": "^4.7.2",
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "lodash": "^4.17.11"
