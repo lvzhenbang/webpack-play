@@ -144,3 +144,7 @@ body {
 ```
 
 解决它们的问题，可以使用`url-loader`等插件。具体可参考[`url-loader`](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/url-loader.md)这篇文章。
+
+3. 随着css样式的增多，构建输出的js文件也会变得越来越大
+
+解决这个问题，可以使用(`extract-text-webpack-plugiin`](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/extract-text-webpack-plugin.md)
