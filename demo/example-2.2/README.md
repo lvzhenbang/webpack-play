@@ -2,11 +2,11 @@
 
 ### 主要内容
 
-讲解了如何使用 `style-loader` 和 `css-loader` 来处理css文件。
+讲解了如何使用 `url-loader` 来处理css文件中引用的字体和图片文件。
 
 具体说明请参考：
 
-[css-style-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
+[url-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/url-loader.md)
 
 ### 运行项目
 
