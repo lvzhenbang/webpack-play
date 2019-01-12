@@ -9,6 +9,9 @@ module.exports = mode => {
             B: './moduleB.js',
             C: './moduleC.js',
         },
+        devServer: {
+            open: true
+        },
         mode: mode,
         optimization: {
             splitChunks: {
