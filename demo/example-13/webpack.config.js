@@ -1,4 +1,3 @@
-var webpack = require('webpack');
 var path = require('path');
 
 module.exports = mode => {
@@ -10,16 +9,18 @@ module.exports = mode => {
         },
         mode: mode,
         optimization: {
-            usedExports: true,
             splitChunks: {
+                chunks: "all",
+                minChunks: 2,
+                maxInitialRequests: 5,
+                minSize: 0,
                 cacheGroups: {
-                    chunks: "initial",
-                    commons: {
-                        name: 'commons',
-                        minChunks: 2,
-                        maxInitialRequests: 5,
-                        minSize: 0
-                    },
+                    // commons: {
+                    //     name: 'commons',
+                    //     minChunks: 2,
+                    //     maxInitialRequests: 5,
+                    //     minSize: 0
+                    // },
                     vendor: {
                         name: "vendor",
                         test: /node_modules/,

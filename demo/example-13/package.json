@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "webpack --env production"
+    "test": "webpack"
   },
   "keywords": [
     "webpack",
@@ -17,6 +17,6 @@
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
-    "underscore": "^1.9.1"
+    "lodash": "^4.17.11"
   }
 }

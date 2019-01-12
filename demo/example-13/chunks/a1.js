@@ -1,8 +1,8 @@
-import {first} from 'underscore'
+import {join} from 'lodash'
 
-module.exports = function (){
+export default function (){
 	let arr = ['a', 'b']
 
-	console.log('this a module of a1', first(arr));
+	console.log('this a module of a1', join(arr, '~'));
 
 }
