@@ -44,8 +44,9 @@ optimization: {
 optimization: {
     splitChunks: {
         cacheGroups: {
+            chunks: 'initial',
             commons: {
-                chunks: 'all',
+                name: 'commons'
                 minChunks: 2,
                 maxInitialRequests: 5,
                 minSize: 0
@@ -64,12 +65,11 @@ optimization: {
     splitChunks: {
         ...
         vendor: {
-					test: /node_modules/,
-					chunks: "all",
-					name: "vendor",
-					priority: 10,
-					enforce: true
-				}
+            name: "vendor",
+            test: /node_modules/,
+            priority: 10,
+            enforce: true
+        }
     }
 },
 ```
@@ -95,3 +95,5 @@ Entrypoint C = vendor.js commons~A~B~C.js commons~A~C.js C.js
 
 
 可参考[构建多页面应用](https://github.com/lvzhenbang/webpack4.x-multi-page)
+
+[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-13)
