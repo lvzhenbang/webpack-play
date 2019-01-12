@@ -65,7 +65,7 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 * [WebpackDevServer](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
-* [ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x之前支持
+* [ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/extract-text-webpack-plugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x之前支持
 * [MiniCssExtractPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/minicssextractplugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x开始支持
 * [webpackMerge](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/webpack-merge.md) // 合并配置项
 * [babel-plguin-lodash & LodashWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/lodash-webpackglugin.md)
