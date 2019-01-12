@@ -26,6 +26,11 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin(),
-        new ExtractTextPlugin("styles.css")
+        // new ExtractTextPlugin("styles.css")
+        new ExtractTextPlugin({
+            filename: (getPath) => {
+                return getPath('css/[name].css').replace('css/js', 'css');
+            }
+        })
     ]
 }
