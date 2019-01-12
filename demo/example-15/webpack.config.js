@@ -16,7 +16,7 @@ module.exports = mode => {
         mode: mode,
         optimization: {
             splitChunks: {
-                chunks: 'initial',
+                chunks: 'async',
                 cacheGroups: {
                     commons: {
                         name: 'commons',
