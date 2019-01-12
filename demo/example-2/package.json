@@ -4,7 +4,7 @@
   "description": "this is a example-2",
   "main": "main.js",
   "scripts": {
-    "test": "webpack"
+    "test": "webpack-dev-server"
   },
   "keywords": [
     "webpack",
@@ -14,9 +14,9 @@
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^0.28.8",
-    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.19.1",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "2.10.0"
   }
 }
