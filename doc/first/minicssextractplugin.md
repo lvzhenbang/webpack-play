@@ -170,4 +170,4 @@ module.exports = mode => {
 
 这样就可以在webpack4.x中轻松的`*.css`。
 
-[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-14)
+[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-15)
