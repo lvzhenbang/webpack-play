@@ -21,9 +21,9 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 <details>
 <summary>目录</summary>
 
-* [css-loader & style-loader 的联系与区别](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
+* [css-loader & style-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
+* [url-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
 * [css扩展语言(sass, less, stylus等)的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-extend.md)
-* [处理资源（如：图片，字体等）的loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/ohter-file-loader.md)
 * [编译ES6为ES5的babel-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/babel-loader.md)
 
 
@@ -63,6 +63,7 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 <details>
 <summary>目录</summary>
 
+* [WebpackDevServer](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
 * [ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/postcss.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x之前支持
 * [MiniCssExtractPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/minicssextractplugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x开始支持

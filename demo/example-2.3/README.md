@@ -2,11 +2,11 @@
 
 ### 主要内容
 
-讲解了如何使用 `style-loader` 和 `css-loader` 来处理css文件。
+讲解了如何使用 `extract-text-webpack-plugin` 插件从构建输出的js文件中分离出css文件。
 
 具体说明请参考：
 
-[css-style-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-style-loader.md)
+[extract-text-webpack-plugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/extract-text-webpack-plugin.md)
 
 
 ### 运行项目

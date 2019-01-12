@@ -182,5 +182,3 @@ module.exports = {
 然后，用webpack编译即可。
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-3)
-
-[webpack处理非css文件(下)](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/postcss.md)

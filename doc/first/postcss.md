@@ -475,5 +475,3 @@ use: [
 ```
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-4)
-
-[webpack 插件](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/plugin.md)
