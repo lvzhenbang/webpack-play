@@ -2,11 +2,11 @@
 
 ### 主要内容
 
-讲解了  `CommonsChunkPlugin` 插件分离各模块的公共模块的两种常见形式：
+讲解了如何使用webpack内置的 `CommonsChunkPlugin` 插件来提取webapck之间的公共代码，开发中常见的有两种形式：`common` 和 `vendor` 。
 
-name, filename
+`common` ： 一般情况下，提取的是自定义代码模块间的公共代码（共用的自定义代码）。
 
-names, minchunks
+`vendor` ： 一般情况下，提取的是自定义代码模块间的公共代码（共用的第三方库）。
 
 具体说明请参考：
 
@@ -15,9 +15,11 @@ names, minchunks
 ### 运行项目
 
 ```
-npm install 安装依赖
+yarn // 安装项目所需依赖
 
-npm run test 打包编译
+npm run test // 开发模式
+
+npm run build // 生产模式
 ```
 
 
