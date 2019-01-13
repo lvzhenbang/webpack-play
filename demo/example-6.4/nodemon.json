@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "watch": "webpack.config.js",
+  "exec": "webpack-dev-server"
+}
