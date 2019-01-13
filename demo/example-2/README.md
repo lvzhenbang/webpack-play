@@ -1,4 +1,4 @@
-## 打包实践（loader）
+## 打包实践（style-loader & css-loader）
 
 ### 主要内容
 
