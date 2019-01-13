@@ -71,7 +71,7 @@
 * [ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/extract-text-webpack-plugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x之前支持
 * [MiniCssExtractPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/minicssextractplugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x开始支持
 * [webpackMerge](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/webpack-merge.md) // 合并配置项
-* [babel-plguin-lodash & LodashWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/lodash-webpackglugin.md)
+* [babel-plguin-lodash & LodashWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/lodash-webpack-plugin.md)
 
 </details>
 
