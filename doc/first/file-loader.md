@@ -127,4 +127,4 @@ if (!limit || src.length < limit) {
 
 其他可参考[官方文档](https://github.com/webpack-contrib/file-loader)。
 
-[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/file-loader.md)
+[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/demo/example-2.4)
