@@ -45,7 +45,6 @@
 <summary>目录</summary>
 
 * [CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/commonschunkplugin.md) // 提取文件块中的共用代码
-* [CopyWebPackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/copy-webpack-plugin.md) // 拷贝静态文件到构建输出的 `dist/` 目录中
 * [UglifyjsWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/uglifyjsplugin.md) // 压缩编译后的模块
 * [DllPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/dllplugin&dllreferenceplugin.md) // 减少打包构建的时间
 * [ProvidePlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/provideplugin.md) // 不必通过import/require使用模块
@@ -68,6 +67,7 @@
 <details>
 <summary>目录</summary>
 
+* [CopyWebPackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/copy-webpack-plugin.md) // 拷贝静态文件到构建输出的 `dist/` 目录中
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
 * [ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/extract-text-webpack-plugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x之前支持
 * [MiniCssExtractPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/minicssextractplugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x开始支持
