@@ -91,8 +91,3 @@ import('jquery')
 注：调用`import()` 或 `require.ensure()` 的地方，被作为分离模块的起点，也即是说，被请求的模块和它引用的所有子模块会分离到一个单独的 chunk 中。
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-1)
-
-我们知道webpack现在只能处理JavaScript文件，而不能处理其他类型的文件，一个web项目可能包括css，html，字体，TypeScript等文件。如何处理这些文件呢？我们可以通过相应的loade来处理。
-
-
-下一篇：[如何使用 loader 处理非js文件（上）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/loader.md)

@@ -1,4 +1,4 @@
-## 打包实践（loader）
+## 打包实践（extract-text-webpack-plugin）
 
 ### 主要内容
 
