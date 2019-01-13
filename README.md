@@ -1,8 +1,6 @@
 ## webpack-learning
 
-webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包构建工具，作为一个要成为大神的小虾，我决定进行初探、深探两个阶段的学习。
-
-文章为自己的心得体会，不足之处欢迎吐槽。
+所有的webpack文章皆为自己的使用心得体会，不足之处欢迎吐槽。
 
 ### 初探
 
@@ -41,7 +39,7 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 </details>
 
-#### webpack4.x之前版本内置插件
+#### webpack内置插件
 
 <details>
 <summary>目录</summary>
@@ -54,21 +52,37 @@ webpack 作为一个被 vuejs和angular这两种 `MV*` 前端框架支持的包�
 
 </details>
 
-#### webpack4.x 内置插件
+#### webpack4.x 改变的内置插件
+
+<details>
+<summary>目录</summary>
 
 * [SplitChunkPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/splitchunkplugin.md) // 提取各模块间的共用代码，它替代了`CommonsChunkPlugin`插件
+
+
+</details>
 
 #### webpack 外载插件
 
 <details>
 <summary>目录</summary>
 
-* [WebpackDevServer](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
 * [ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/extract-text-webpack-plugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x之前支持
 * [MiniCssExtractPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/minicssextractplugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x开始支持
 * [webpackMerge](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/webpack-merge.md) // 合并配置项
 * [babel-plguin-lodash & LodashWebpackPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/lodash-webpackglugin.md)
+
+</details>
+
+### 辅助开发工具
+
+<details>
+<summary>目录</summary>
+
+* [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
+* [WebpackDevServer](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
+* [nodemon](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/nodemon.md) // 用监视webpack.config.js的改变
 
 </details>
 
