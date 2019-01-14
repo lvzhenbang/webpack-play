@@ -9,7 +9,7 @@
 
 这是常用的在`webpack构建的项目`中引入第三方库的方式。
 
-注：为了更好的演示示例代码，示例是在[`nodemon`]这篇文章的基础上操作的。
+注：为了更好的演示示例代码，示例是在[`nodemon`](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/nodemon.md)这篇文章的基础上操作的。
 
 但是，在不同的场景下，对`webpack构建的项目`有不同的需求:
 
