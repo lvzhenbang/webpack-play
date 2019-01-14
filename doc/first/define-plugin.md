@@ -8,7 +8,6 @@
 
 * 需要在开发模式中使用某些调试代码，如：`console.log(...)`，而生产模式不使用
 * 需要在开发模式和生产模式使用不同的`webpack.config.js`来提升编译速度
-* 第三方库的全局使用，如：jquery, lodash
 
 ## 示例展示
 
@@ -128,8 +127,6 @@ export default function() {
 
 然后，将`index.html`拖拽到浏览器（chrome）中，会看到有背景图片的页面。
 
-
-这样，开发中，常用场景中的前两个已经解决。至于第三个场景其实也可以使用`definePlugin`定义一个全局常量，但是又有不同，这个在[`引用第三方库`](https://github.com/lvzhenbang/webpack-play/tree/master/doc/third-party.md)这篇文章中做了详解。
 
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-6.5)
