@@ -6,7 +6,7 @@
 
 具体说明请参考：
 
-[nodemon](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/html-webpack-plugin.md)
+[nodemon](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/nodemon.md)
 
 ### 运行项目
 
