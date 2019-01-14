@@ -1,1 +1,1 @@
-document.write('hello webapck.')
+require('./module.js')();
