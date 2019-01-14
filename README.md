@@ -48,7 +48,8 @@
 * [CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/commonschunkplugin.md) // 提取文件块中的共用代码
 * [UglifyjsWebpackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/uglifyjsplugin.md) // 压缩编译后的模块
 * [DllPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/dllplugin&dllreferenceplugin.md) // 减少打包构建的时间
-* [ProvidePlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/provide-plugin.md) // 定义一个全局常量，可以省去`import`或`require`来引用第三方库。如jquery，loadsh。
+* [ProvidePlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/provide-plugin.md) // 可以省去`import`或`require`来引用第三方库。如jquery，loadsh。
+* [DefinePlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/define-plugin.md) // 定义一个全局常量，可以省去`import`或`require`来引用第三方库。如jquery，loadsh。
 * [HotModuleRepalcementPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/hmrplugin.md) // 启用热交换
 
 </details>
