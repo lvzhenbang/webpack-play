@@ -1,0 +1,13 @@
+@font-face {
+  font-family: gb2312;
+  src: url(gb2312.8a1e9fe86f7a9489ec091ec4b78af185.ttf);
+}
+body {
+  background-color: red;
+  color: white;
+  font-size: 36px;
+  /* background: url(./static/bg.jpg) center center; */
+  font-family: gb2312;
+}
+
+/*# sourceMappingURL=app.css.map*/

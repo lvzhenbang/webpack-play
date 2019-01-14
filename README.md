@@ -94,27 +94,38 @@
 <details>
 <summary>目录</summary>
 
-* [自定义实现 webpack-dev-server ](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/custom-HMR.md)
-* [webpack4.x变化](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/webpack4.md)
-* [webpack4.x变化 二](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/webpack4-2.md)
-* [webapck常见使用问题](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/doc.md)
+* [自定义实现 webpack-dev-server ](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/custom-HMR.md)
+* [webapck——实现构建输出最小](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/mini-size.md)
 
 </details>
+
 
 ### 多页面应用创建
 
 <details>
 <summary>目录</summary>
 
-* [构建多页面应用](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/multi-page.md)
-* [构建多页面应用——单个页面的处理](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/multi-page-single-page.md)
-* [构建多页面应用——模板](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/multi-page-template.md)
-* [构建多页面应用——静态资源](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/multi-page-assets.md)
-* [构建多页面应用——优化（一）](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/multi-page-function.md)
-* [构建多页面应用——hash](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/multi-page-hash.md)
-* [构建多页面应用——优化（二）](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/multi-page-mockdata.md)
+* [构建多页面应用](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/multi-page.md)
+* [构建多页面应用——单个页面的处理](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/multi-page-single-page.md)
+* [构建多页面应用——模板](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/multi-page-template.md)
+* [构建多页面应用——静态资源](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/multi-page-assets.md)
+* [构建多页面应用——优化（一）](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/multi-page-function.md)
+* [构建多页面应用——hash](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/multi-page-hash.md)
+* [构建多页面应用——优化（二）](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/multi-page-mockdata.md)
 
 </details>
+
+
+### 其他
+
+<details>
+<summary>目录</summary>
+* [webpack4.x变化](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/webpack4.md)
+* [webpack4.x变化 二](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/webpack4-2.md)
+* [webapck常见使用问题](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/other.md)
+
+</details>
+
 
 ### LICENSE
 
