@@ -8,9 +8,9 @@
 <summary>目录</summary>
 
 * [webpack 入门](https://github.com/lvzhenbang/webpack-play/blob/master/doc/first/index.md)
-* [引入第三方库](https://github.com/lvzhenbang/webpack-play/tree/master/doc/third-party.md)
-* [loader入门](https://github.com/lvzhenbang/webpack-play/tree/master/doc/loader.md)
-* [plugin入门](https://github.com/lvzhenbang/webpack-play/tree/master/doc/plugin.md)
+* [引入第三方库](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/third-party.md)
+* [loader入门](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/loader.md)
+* [plugin入门](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/plugin.md)
 
 </details>
 
