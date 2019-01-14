@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "watch": "webpack.config.js",
+  "exec": "cross-env DEBUG=true webpack-dev-server"
+}

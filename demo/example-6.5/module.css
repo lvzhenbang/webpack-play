@@ -1,0 +1,11 @@
+@font-face {
+  font-family: gb2312;
+  src: url(./static/gb2312.ttf);
+}
+body {
+  background-color: red;
+  color: white;
+  font-size: 36px;
+  /* background: url(./static/bg.jpg) center center; */
+  font-family: gb2312;
+}
