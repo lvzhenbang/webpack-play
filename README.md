@@ -80,7 +80,7 @@
 <summary>目录</summary>
 
 * [CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/commonschunkplugin.md) // 提取文件块中的共用代码
-* [UglifyjsWebpackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/uglifyjsplugin.md) // 压缩编译后的模块
+* [UglifyjsPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/uglifyjsplugin.md) // 压缩编译后的模块
 * [DllPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/dllplugin&dllreferenceplugin.md) // 减少打包构建的时间
 * [ProvidePlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/provide-plugin.md) // 可以省去`import`或`require`来引用第三方库。如jquery，loadsh。
 * [DefinePlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/define-plugin.md) // 定义一个全局常量，可以用来区分开发模式和生产模式。
@@ -94,6 +94,7 @@
 <summary>目录</summary>
 
 * [SplitChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/splitchunkplugin.md) // 提取各模块间的共用代码，它替代了`CommonsChunkPlugin`插件
+* webpack4.x移除了`UglifyJsplugin`，而引入了`MinChunkSizePlugin`插件；
 
 </details>
 
