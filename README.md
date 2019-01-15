@@ -1,16 +1,53 @@
 ## webpack-play
 
-所有的webpack文章皆为自己的使用心得体会，不足之处欢迎吐槽。
+注：webapck的生态圈很大，也很完善，但正因为大，而让人变得无所适从。`webpack-play`让使用webapck变得轻松起来。不夸张的说，webapck可以处理你开发中的所有问题。
+
 
 ### 初探
 
-<details>
-<summary>目录</summary>
+[webpack 入门](https://github.com/lvzhenbang/webpack-play/blob/master/doc/first/index.md)可以让你快速的上手webapck。
 
-* [webpack 入门](https://github.com/lvzhenbang/webpack-play/blob/master/doc/first/index.md)
-* [引入第三方库](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/third-party.md)
-* [loader入门](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/loader.md)
-* [plugin入门](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/plugin.md)
+需要webapck做什么工作？
+
+> 处理css文件块
+
+要实现css代码以内联的方式被`*.html`文件引用。可参考[css-loader & style-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-style-loader.md)]；
+
+要实现css代码被分为独立的文件，可以通过`<link>`元素被`*.html`文件引用。可参考[ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/extract-text-webpack-plugin.md)。
+
+> 处理图片和字体
+
+[url-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-style-loader.md)可以解决图片或字体是被合并到构建输出的文件中，还是分离出来。但它只能处理`url()`；如果要处理`<img src="...">`，可参考[CopyWebPackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/copy-webpack-plugin.md)。
+
+> 使用js新特性
+
+[babel-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/babel-loader.md)可以满足你的需求，同时满足浏览器的兼容需求。
+
+> 规范开发中的代码
+
+如果是js代码，可以参考[`eslint-loader`与Javascript语法检测的](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/eslint-loader.md)这篇文章；
+
+如果是css代码，可参考[`stylelint-loader`与css语法检测](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/stylelint-loader.md)这篇文章。
+
+
+
+### 进阶
+
+> 辅助开发工具
+
+* [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
+* [WebpackDevServer](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
+* [nodemon](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/nodemon.md) // 用监视webpack.config.js的改变
+
+> webapck实现最小化构建输出
+
+* 提取构建输出文件的公共代码；webpack4.x之前版本可参考[CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/commonschunkplugin.md)篇文章，webpack4.x可参考[SplitChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/splitchunkplugin.md)这篇文章
+* 可以从压缩`构建输出文件`（主要指css，js）；
+* 优化图片大小；
+* 如果开发的应用支持网络环境，可以使用CDN。可参考[引入第三方库](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/third-party.md)这篇文章；
+* 移除第三方库中未使用的js代码块。 可参考[babel-plguin-lodash & LodashWebpackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/lodash-webpack-plugin.md)这篇文章；
+* 移除项目未使用的css代码块
+
 
 </details>
 
@@ -22,9 +59,8 @@
 * [css-loader & style-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-style-loader.md)
 * [url-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-style-loader.md)
 * [file-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/file-loader.md)
-* [css扩展语言(sass, less, stylus等)的loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-extend.md)
-* [编译ES6为ES5的babel-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/babel-loader.md)
-
+* [css扩展语言loader，如：sass, less, stylus等](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-extend.md)
+* [babel-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/babel-loader.md)
 
 </details>
 
@@ -33,10 +69,9 @@
 <details>
 <summary>目录</summary>
 
-* [语法检测的eslint-loader(文件类型：*.js)](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/eslint-loader.md)
-* [语法检测的stylelint-loader(文件类型：*.css)](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/stylelint-loader.md)
-
-* [postcss一个处理css模块的插件平台](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/postcss.md)
+* [eslint-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/eslint-loader.md)
+* [stylelint-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/stylelint-loader.md)
+* [postcss](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/postcss.md)
 
 </details>
 
@@ -61,7 +96,6 @@
 
 * [SplitChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/splitchunkplugin.md) // 提取各模块间的共用代码，它替代了`CommonsChunkPlugin`插件
 
-
 </details>
 
 #### webpack 外载插件
@@ -75,27 +109,6 @@
 * [MiniCssExtractPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/minicssextractplugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x开始支持
 * [webpackMerge](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/webpack-merge.md) // 合并配置项
 * [babel-plguin-lodash & LodashWebpackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/lodash-webpack-plugin.md)
-
-</details>
-
-### 辅助开发工具
-
-<details>
-<summary>目录</summary>
-
-* [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
-* [WebpackDevServer](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
-* [nodemon](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/nodemon.md) // 用监视webpack.config.js的改变
-
-</details>
-
-### 进阶
-
-<details>
-<summary>目录</summary>
-
-* [自定义实现 webpack-dev-server ](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/custom-HMR.md)
-* [webapck——实现构建输出最小](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/mini-size.md)
 
 </details>
 
