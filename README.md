@@ -120,9 +120,10 @@
 
 <details>
 <summary>目录</summary>
+
 * [webpack4.x变化](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/webpack4.md)
 * [webpack4.x变化 二](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/webpack4-2.md)
-* [webapck常见使用问题](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/other.md)
+* [webapck常见使用问题](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/issue.md)
 
 </details>
 
