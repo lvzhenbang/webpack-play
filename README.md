@@ -9,37 +9,36 @@
 
 需要webapck做什么工作？
 
-> 处理css文件块
+#### 处理css文件块
 
 要实现css代码以内联的方式被`*.html`文件引用。可参考[css-loader & style-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-style-loader.md)]；
 
 要实现css代码被分为独立的文件，可以通过`<link>`元素被`*.html`文件引用。可参考[ExtractTextWebpackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/extract-text-webpack-plugin.md)。
 
-> 处理图片和字体
+#### 处理图片和字体
 
 [url-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-style-loader.md)可以解决图片或字体是被合并到构建输出的文件中，还是分离出来。但它只能处理`url()`；如果要处理`<img src="...">`，可参考[CopyWebPackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/copy-webpack-plugin.md)。
 
-> 使用js新特性
+#### 使用js新特性
 
 [babel-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/babel-loader.md)可以满足你的需求，同时满足浏览器的兼容需求。
 
-> 规范开发中的代码
+#### 规范开发中的代码
 
 如果是js代码，可以参考[`eslint-loader`与Javascript语法检测的](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/eslint-loader.md)这篇文章；
 
 如果是css代码，可参考[`stylelint-loader`与css语法检测](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/stylelint-loader.md)这篇文章。
 
 
-
 ### 进阶
 
-> 辅助开发工具
+#### 辅助开发工具
 
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
 * [WebpackDevServer](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
 * [nodemon](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/nodemon.md) // 用监视webpack.config.js的改变
 
-> webapck实现最小化构建输出
+#### webapck实现最小化构建输出
 
 * 提取构建输出文件的公共代码；webpack4.x之前版本可参考[CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/commonschunkplugin.md)篇文章，webpack4.x可参考[SplitChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/splitchunkplugin.md)这篇文章
 * 可以从压缩`构建输出文件`（主要指css，js）；
@@ -51,7 +50,7 @@
 
 </details>
 
-#### 常用loader
+### 常用loader
 
 <details>
 <summary>目录</summary>
@@ -64,7 +63,7 @@
 
 </details>
 
-#### 其他的loader
+### 其他的loader
 
 <details>
 <summary>目录</summary>
@@ -75,7 +74,7 @@
 
 </details>
 
-#### webpack内置插件
+### webpack内置插件
 
 <details>
 <summary>目录</summary>
@@ -89,7 +88,7 @@
 
 </details>
 
-#### webpack4.x 改变的内置插件
+### webpack4.x 改变的内置插件
 
 <details>
 <summary>目录</summary>
@@ -98,7 +97,7 @@
 
 </details>
 
-#### webpack 外载插件
+### webpack 外载插件
 
 <details>
 <summary>目录</summary>
