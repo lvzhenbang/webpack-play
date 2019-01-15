@@ -2,16 +2,16 @@
 
 ### 主要内容
 
-讲解了  `sass-loader` 和 `less-loader` 以及 `stylus-loader` 这些用来处理我们常见的三种扩展语言。
+讲解了  `sass` 、 `less` 和 `stylus` 这三种常见css预处理语言。
 
 具体说明请参考：
 
-[如何使用 loader 处理非js文件（中）](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css=extend.md)
+[css-extend](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-extend.md)
 
 ### 运行项目
 
 ```
-npm install 安装依赖
+yarn // 安装依赖
 
 npm run test 打包编译
 ```

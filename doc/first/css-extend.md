@@ -1,127 +1,147 @@
 ## loader处理css扩展语言
 
-css的扩展语言主要有三种，一种是sass，一种是less，另外一种是stylus。
+css的扩展语言主要有三种:
 
-css扩展语言使变得更加强大与优雅。使用它可以帮助开发人员更好的组织和管理样式文件，更高效的开发项目。
+* [sass](https://github.com/sass/sass)
+* [less](https://github.com/less/less.js)
+* [stylus](https://github.com/stylus/stylus)
 
-css扩展语言让程序员写的更少、更好、更易于维护样式文件。
+参考文档：
 
-css扩展语言特色功能：
+* [sass中文文档](https://www.sass.hk/docs/)
+* [less中文文档](http://lesscss.cn/)
+* [stylus参考文档](http://stylus-lang.com/)
 
-* 都很好的兼容了css3
-* 在css基础上增加了变量及其他功能
-* 自定义输出格式
+### 文件编译
 
-[sass中文文档](https://www.sass.hk/docs/)
+* `sass-loader`过滤出`*.scss`文件并将它转化为js字符串，然后调用`node-sass`将其转化为正常的css语法的字符串；
+* `less-loader`过滤出`*.less`文件并将它转化为js字符串，然后调用`less`将其转化为正常的css语法的字符串；
+* `stylus-loader`过滤出`*.styl`文件并将它转化为js字符串，然后调用`stylus`将其转化为正常的css语法的字符串；
 
-[less中文文档](http://lesscss.cn/)
-
-[postcss中文文档](http://postcss.org/)
-
-### sass-loader
-
-要使用 `sass-loader` ，那么首先要创建一个sass文件，下面将 `module.css` 文件名修改成为 `module.scss` ，代码修改如下：
-
-```
-.my-box {
-    width: 200px;
-    height: 30px;
-    border: 1px solid #ccc;
-}
-
-.icon {
-    margin: 10px 0;
-    font-size: 42px;
-    line-height: 100px;
-    color: #333;
-    transition: font-size 0.25s ease-out 0s;
-    :hover {
-        font-size: 100px;
-    }
-}
-```
-
-然后，在 `module.js` 中应用 `module.scss` 文件：
-
-	require('./module.scss');
+### 示例demo
 
 
-紧接着，修改`webpack.config.js` 文件，代码如下：
+初始化`webpack.config.js`，代码如下：
 
 ```
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: {
         app: './main.js'
     },
-    module: {
-        rules: [
-            // 添加 css-loader 和style-locader 处理css样式文件
-            // 具体 css-loader 使用可参考 https://www.npmjs.com/package/css-loader
-            // 具体 style-loader 使用可参考 https://www.npmjs.com/package/style-loader
-            // 具体 sass-loader 使用可参考 https://www.npmjs.com/package/sass-loader
-            {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            }
-        ]
-    },
-    externals: {
-        jquery: 'window.$'
-    },
     output: {
-        filename: '[name].js'
+        path: path.join(__dirname, 'dist/'),
+        filename: '[name].js',
     },
-    watch: true
+    devServer: {
+        open: true
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './template/index.html'
+        })
+    ]
 }
 ```
-执行 `sass-loader` 安装命令：
 
-	npm install sass-loader --save-dev
+创建一个`html-webpack-plugin`所需的模板文件`/template/index.html`，代码如下：
 
-然后，在控制台输入 `npm run test` ，编译到 `module.scss` 文件会报错，提示不能找到 `node-sass` 模块，说明使用 `sass-loader` 需要依赖于  `node-sass` 模块才能用webpack处理 `*.scss` 文件的。
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sass less stylus</title>
+</head>
+<body>
+  <div class="sass">sass</div>
+  <div class="less">less</div>
+  <div class="stylus">stylus</div>
+</body>
+</html>
+```
 
-执行 `node-sass` 安装命令：
+创建一个`module.css`，定义`index.html`的初始化样式，代码如下：
 
-	npm install node-sass --save-dev
+```
+body {
+    font-size: 18px;
+    background: red;
+}
+```
 
-这样在控制台输入 `npm run test` ，就可以编译 `*.scss` 文件。
+然后，在 `main.js` 中，引入 `module.css` 文件，代码如下：
 
-注： `sass-loader` 文件处理 `*.scss` 文件，是先将其转换为css文件，按照webpack的从右往左的编译预处理文件，所以 `sass-loader` 要出现在最后的顺序。处理其它扩展css文件的loader与sass一样。
+```
+import './module.css';
+```
+
+最后，在`webpack.config.js`中，添加如下代码：
+
+```
+{
+    test: /\.css$/,
+    use: ['style-loader', 'css-loader']
+},
+```
+
+运行`npm run test`脚本命令。由于使用了`nodemon`和`webpack-dev-server`，所以构建完成后，浏览器可以自启动，源文件代码更新保存后，会自动刷新。
+
+
+### 使用 sass-loader
+
+首先，安装 `sass-loader` 和 `node-sass` 依赖，命令如下：
+
+```
+yarn add sass-loader node-sass --dev
+```
+
+然后，在根目录下创建`sass.scss`文件，代码如下：
+
+```
+.sass {
+    color: yellow;
+}
+```
+
+最后，在`webpack.config.js`中，添加如下代码：
+
+```
+{
+    test: /\.scss$/,
+    use: ['style-loader', 'css-loader', 'sass-loader']
+},
+```
+
+保存`webpack.config.js`后，浏览器会自动刷新。
 
 ### less-loader
 
-`less-loader` 处理less样式文件与 `sass-loader` 处理sass样式文件类似。
-
-`less-loader` 安装命令：
-
-	npm install less-loader --save-dev
-
-创建 `module.less` 文件，代码修改如下:
+首先，安装 `less-loader` 和 `less` 依赖，命令如下：
 
 ```
-.my-box {
-    width: 200px;
-    height: 30px;
-    border: 1px solid #ccc;
-}
+yarn less-loader less --dev
+```
 
-.icon {
-    margin: 10px 0;
-    font-size: 42px;
-    line-height: 100px;
-    color: #333;
-    transition: font-size 0.25s ease-out 0s;
-    & :hover {
-        font-size: 100px;
-    }
+然后，再根目录下创建一个 `less.less` 文件，代码如下:
+
+```
+.less {
+    color: blue;
 }
 ```
 
-然后，在 `module.js` 中应用 `module.less` 文件：
+紧接着，在 `main.js` 中，引入 `less.less` 文件：
 
-	require('./module.less');
+```
+import './less.less';
+```
 
-修改 `webpack.config.js` 文件中的
+最后，在 `webpack.config.js` 中添加如下代码：
 
 ```
 {
@@ -130,43 +150,30 @@ module.exports = {
 }
 ```
 
-同样的 `less-loader` 需要依赖于  `less` 模块才能用webpack处理 `*.less` 文件的。所以不要忘记安装 `less` ：
-
-	npm install --save-dev less
-
-然后，用webpack编译即可。
+保存`webpack.config.js`后，浏览器会自动刷新。
 
 ### stylus-loader
 
-`stylus-loader` 处理less样式文件与 `sass-loader` 处理sass样式文件和 `stylus-loader` 处理stylus样式文件类似。
-
-`stylus-loader` 安装命令：
-
-	npm install stylus-loader --save-dev
-
-创建 `module.stylus` 文件，代码修改如下:
+首先，安装 `stylus-loader` 和 `stylus` 依赖，命令如下：
 
 ```
-.my-box
-    width 200px
-    height 30px
-    border 1px solid #ccc
-
-.icon 
-    margin 10px 0
-    font-size 42px
-    line-height 100px
-    color #333
-    transition font-size 0.25s ease-out 0s
-    &:hover 
-        font-size 100px
+yarn stylus-loader stylus --dev
 ```
 
-然后，在 `module.js` 中应用 `module.styl` 文件：
+然后，在根目录下，创建一个 `stylus.styl` 文件，代码如下:
 
-	require('./module.styl');
+```
+.stylus
+    color #00ff00
+```
 
-修改 `webpack.config.js` 文件中的
+紧接着，在 `main.js` 中，引用 `stylus.styl` 文件：
+
+```
+import './stylus.styl';
+```
+
+最后，在 `webpack.config.js` 中，添加如下代码：
 
 ```
 {
@@ -175,10 +182,7 @@ module.exports = {
 }
 ```
 
-同样的 `stylus-loader` 需要依赖于 `stylus` 模块才能用webpack处理 `*.styl` 文件的。所以不要忘记安装 `stylus` ：
+保存`webpack.config.js`后，浏览器会自动刷新。
 
-	npm install --save-dev stylus
-
-然后，用webpack编译即可。
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-3)

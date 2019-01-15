@@ -1,16 +1,4 @@
-.my-box {
-    width: 200px;
-    height: 30px;
-    border: 1px solid #ccc;
-}
-
-.icon {
-    margin: 10px 0;
-    font-size: 42px;
-    line-height: 100px;
-    color: #333;
-    transition: font-size 0.25s ease-out 0s;
-    :hover {
-        font-size: 100px;
-    }
+body {
+    font-size: 18px;
+    background: red;
 }
