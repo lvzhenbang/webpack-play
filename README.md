@@ -39,6 +39,25 @@ css和js作为web开发的重要组成部分。
 * 有一个`babel`可以实现ES（JavaScript标准）新语法特性转换到指定语法特性；
 * 有一个`postCss`也可以实现css样式的转换。
 
+#### 函数化编程
+
+> `*.js`模块的函数化编程
+
+我们所熟知的是函数化编程可以极大程度的缩减JavaScript代码量。
+
+> css的函数化编程
+
+如果css也能实现函数化编程，那么css的代码量也将急剧减小，`sass`、`stylus`等css扩展语言成为了首选。可参考[css-extend](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-extend.md)这篇文章。
+
+> html的函数化编程
+
+一致比较流行的是`*.ejs`，`*.pug`。我个人常用的是`pug`，参考示例[webpack4.x-multi-page](https://github.com/lvzhenbang/webpack4.x-multi-page)。
+
+> webpack的函数化编程
+
+可参考[webpack4-demo](https://github.com/survivejs-demos/webpack-demo)。
+
+
 #### 辅助开发工具
 
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
