@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],[function(o,n,t){"use strict";n.a=function(){console.log("this a module of a3")}},function(o,n,t){"use strict";var e=t(2),c=t.n(e);n.a=function(){console.log("this a module of a1",c()(["a","b"],"~")),document.body.style.fontSize="36px",document.write("hello world.")}}]]);
+//# sourceMappingURL=commons.js.map

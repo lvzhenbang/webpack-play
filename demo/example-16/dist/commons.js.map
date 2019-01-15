@@ -1,0 +1,1 @@
+{"version":3,"file":"commons.js","sources":["webpack:///./chunks/a3.js"],"sourcesContent":["export default function (){\r\n\tconsole.log('this a module of a3');\r\n}"],"mappings":"AAAA","sourceRoot":""}

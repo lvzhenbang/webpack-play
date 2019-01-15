@@ -41,11 +41,11 @@
 #### webapck实现最小化构建输出
 
 * 提取构建输出文件的公共代码；webpack4.x之前版本可参考[CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/commonschunkplugin.md)篇文章，webpack4.x可参考[SplitChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/splitchunkplugin.md)这篇文章
-* 可以从压缩`构建输出文件`（主要指css，js）；
-* 优化图片大小；
+* 可以从压缩`构建输出文件`（主要指css，js）。webpack4.x之前版本，webapck4.x可参考[webapck4.x 压缩构建输出](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/compress.md)这篇文章；
+* 优化图片大小。可参考[构建多页面应用——静态资源](https://github.com/lvzhenbang/webpack-play/tree/master/doc/other/multi-page-assets.md)这篇文章；
 * 如果开发的应用支持网络环境，可以使用CDN。可参考[引入第三方库](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/third-party.md)这篇文章；
 * 移除第三方库中未使用的js代码块。 可参考[babel-plguin-lodash & LodashWebpackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/lodash-webpack-plugin.md)这篇文章；
-* 移除项目未使用的css代码块
+* 移除项目未使用的css代码块。可参考[webapck4.x 移除构建输出的`*.css`文件中，未使用的css选择器](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/purify-css.md)这篇文章。
 
 
 </details>
