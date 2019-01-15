@@ -6,7 +6,7 @@
 
 具体说明请参考：
 
-[css-extend](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css-extend.md)
+[css-extend](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/css-extend.md)
 
 ### 运行项目
 

@@ -32,6 +32,13 @@
 
 ### 进阶
 
+### 两前端个技术生态
+
+css和js作为web开发的重要组成部分。
+
+* 有一个`babel`可以实现ES（JavaScript标准）新语法特性转换到指定语法特性；
+* 有一个`postCss`也可以实现css样式的转换。
+
 #### 辅助开发工具
 
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
