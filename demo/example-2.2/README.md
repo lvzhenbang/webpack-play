@@ -2,7 +2,7 @@
 
 ### 主要内容
 
-讲解了如何使用 `url-loader` 来处理css文件中引用的字体和图片文件。
+讲解了如何使用 `url-loader` 来处理css文件中引用的字体和图片文件。而分离出图片和字体需要，使用[`file-loader`](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/file-loader.md)。
 
 具体说明请参考：
 
