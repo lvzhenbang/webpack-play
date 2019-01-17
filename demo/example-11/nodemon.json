@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "watch": [
+    "webpack.config.js",
+    ".babelrc"
+  ],
+  "exec": "webpack-dev-server --env development"
+}

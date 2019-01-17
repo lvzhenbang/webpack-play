@@ -1,241 +1,240 @@
-## 如何使用新ES语法
+## babel-loader
 
-尝试用最新的ES语法特性，同时满足浏览器的兼容性。这是就需要[`babel`](https://babeljs.io/docs/en/)来进行语法转换。
+在webapck中使用`babel`，需要安装`babel-loader`依赖，和其他的loader一样（如：`sass-loader`等）一样。
 
-### babel-loader
+它的作用：
 
-这个包是由babel团队开发的loader，用来告诉webpack我想要对我的js代码进行兼容性编译。
+* 匹配要处理的文件；
+* 将匹配后的文件转换为js字符串，并给他们做标记（chunk id）；
+* 调用`babel`处理这些字符串，执行JavaScript代码的转换编译命令。
 
-`babel-loader` 只是起到一个通知者的角色，通知babel你需要干活了，在webpack的module中使用代码如下：
+关于`babel`生态系统的介绍，请参考[`babel`](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/babel.md)这篇文章。
+
+### 最简单的demo
+
+注：为了更好展示示例效果，在[`nodemon`](https://github.com/lvzhenbang/webpack-play/tree/master/demo/example-6.3)这个示例的源码基础上进行代码添加。
+
+首先，安装`babel-loader`依赖，命令如下：
 
 ```
+yarn add babel-loader --dev
+```
+
+然后，因为`babel-loader`要调用`babel`依赖(因为自`babel v6.x`开始，它的生态系统发生了变化，具体可参考[babel](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/babel.md)这篇文章)，最简单的安装命令如下：
+
+```
+yarn add @babel/core @babel/preset-env --dev
+```
+
+注：`@babel/preset-env`用来指定应用满足的环境，如：浏览器和node等。
+
+紧接着，在`webpack.config.js`中添加如下代码：
+
+```
+...
 module: {
   rules: [
     {
       test: /\.js$/,
-      exclude: /(node_modules)/, // 不对node_modules目录下的文件进行编译，可以提升webpack打包速度，其他loader也有这个配置
       use: {
-        loader: 'babel-loader',
-        // loader: 'babel-loader?cacheDirectory', // 使用缓存目录它可以进一步提升webpack的编译速度
-        options: { // 这个配置项我们一般单独拿出来，创建一个‘.babelrc’文件来单独存放配置项
-          presets: ['@babel/preset-env']，// babel预设
-          plugin: ['@babel/plugin-proposal-object-rest-spread'] // 所需要使用的插件
+        'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
         }
       }
     }
+    ...
+  ]
+}
+...
+```
+
+注意：如果没有指定一个量化的应用运行环境，`babel`将默认使用[`browserlist`](https://browserl.ist/)的默认值。
+
+
+例如，你可以设置应用满足并支持所有的最近两个版本的浏览器（除了ie要满足`ie > 7`）。配置代码如下：
+
+```
+...
+{
+  test: /\.js$/,
+  use: {
+    loader: 'babel-loader',
+    options: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            "targets": {
+              "chrome": "58",
+              "ie": "8"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}
+...
+```
+
+运行`npm run build`脚本命令，构建结束后，可以在指定的浏览器环境中打开`index.html`来查看效果。
+
+
+为了使用更好的维护`@babel/preset-env`配置信息，一般情况下，都会将它提出来，单独放在一个`.babelrc`文件中。
+
+需要在项目根目录下，创建一个`.babelrc`文件，配置信息如下：
+
+```
+{
+  "presets": [
+      [
+          "@babel/preset-env",
+          {
+              "targets": {
+                  "chrome": "58",
+                  "ie": "8"
+              }
+          }
+      ]
   ]
 }
 ```
 
-### babel-core
-
-如果说 `babel-loader` 是告诉webpack我要对js文件进行代码兼容性编译，那么，webpack接下来就是要找babel，而bable的入口就是 `babel-core` ，只有通过它，webpack才能使用各种babel的api（前提是你安装了相关的api）。
-
-### babel-preset-es* 和 babel-preset-stage-*
-
-`babel-preset-es2015` ，`babel-preset-es2016` ，`babel-preset-es2017`等等傻傻的分也分不清楚。
-
-这些预设将支持ES6新语法的兼容性编译。
-
-#### 将代码转化为 ES3
-
-`babel-preset-es3` 
-
-#### 将代码转化为 ES5
+`webpack.config.js`文件修改如下：
 
 ```
-'babel-preset-es2015' ，
-'babel-preset-stage-0' ，
-'babel-preset-stage-1' ，
-'babel-preset-stage-2' ，
-'babel-preset-stage-3' ，
-```
-
-#### 将代码转化为 ES6
-
-```
-'babel-preset-es2016' 将ES2016转化成ES6，
-'babel-preset-es2017' 将ES2017转化成ES6，
-```
-
-预设只能将ES6语法编译为你指定的ES版本语法，例如：箭头函数，但是像 `Array.from` 这样的API呢他无能为力。那么，怎么办呢，我们下面来介绍几种解决方案。
-
-### 处理ES6 API
-
-#### babel-polyfill
-
-babel预设可以编译几乎所有的JavaScript新语法，但是对于API却不能解决，解决这个问题babel用的是 `babel-polyfill` (它有core-js和regenerator两部分构成)。
-
-执行安装命令：
-
-	npm install --save-dev babel-polyfill
-
-`babel-polyfill` 有三种引入方法。
-
-1.那个模块需要就在那个模块引入，
-
-	require('babel-polyfill');
-
-2.全局引入方法1，在项目的入口文件引入，如果项目有多个入口，则在每个需要的入口分别加入。
-
-	require('babel-polyfill');
-
-3.全局引入方法2，可以在项目的 `webpack.config.js` 的入口配置项中引入。
-
-```
-entry: {
-    app: ['babel-polyfill', './main.js']
-},
-```
-
-这是第一种解决方案用来将ES6代码编译为es5。但是这种方案，增加了一些不必要的代码，webpack打包后的文件比较大，使用它还有一个问题就是容易造成全局污染。。
-
-而刚刚好babel提供了babel-runtime。babel-plyfill我们以前经常用，而babel-runtime，则是现在常用的。
-
-#### babel-runtime
-
-babel-runtime不会污染全局对象。如：当前的运行环境如果不支持Symbol，可以访问 `babel-runtime/core-js/symbol` 这里重新定义了symbol，此外还有Promise，Set 和 Map 等。
-
-`babel-runtime` 官方建议用在生产环境，而开发环境使用 `babel-plugin-transform-runtime`
-
-##### babel-plugin-transform-runtime
-
-引用自：[https://github.com/babel/babel-loader](https://github.com/babel/babel-loader)
-
-```
-babel uses very small helpers for common functions such as _extend. By default this will be added to every file that requires it.
-
-You can instead require the babel runtime as a separate module to avoid the duplication.
-```
-
-这段话的意思是说：
-
-babel会使用一些非常小的辅助（helper）函数作为通用函数，例如：`_extend` 。默认情况下，这类函数将被添加到每个需要它的文件中。这时你可以使用babel runtime作为单独的模块来避免重复。
-
-```
-module: {
-  rules: [
-    {
-      test: /\.js$/,
-      exclude: /(node_modules)/, // 不对node_modules目录下的文件进行编译，可以提升webpack打包速度，其他loader也有这个配置
-      use: {
-        loader: 'babel-loader',
-        // loader: 'babel-loader?cacheDirectory', // 使用缓存目录它可以进一步提升webpack的编译速度
-        options: { // 这个配置项我们一般单独拿出来，创建一个‘.babelrc’文件来单独存放配置项
-          presets: ['@babel/preset-env']，// babel预设
-          plugin: ['@babel/transform-runtime']
-        }
-      }
-    }
-  ]
+{
+  test: /\.js$/,
+  use: 'babel-loader'
 }
 ```
 
-`babel-plugin-transform-runtime` 包含一个内置的polyfill(它包含一个自定义的regenerator运行时和core.js)，所以，在webpack中使用 `ProvidePlugin` 用 `shimming` 方法定义 `Promise` 将不起作用。
+运行`npm run dev`脚本命令，可以查看demo效果。以后，再修改`webpack.config.js`，保存后，浏览器会自动重启。
 
-### env preset
+## `babel`自定义功能
 
-`babel-preset-env` 允许你指定一个代码执行环境，并且只编译该环境缺少的特性。
+默认情况下，`babel`直接使用`@babel/runtime`进行编译，而`@babel/plugin-transform-runtime`可以实现`babel`功能的自定义。
 
-而非 `babel-pre-env` 预设存在的问题在于它们往往做得太多。例如，大多数现代浏览器都支持ES6生成器。如果您使用 `babel-preset-es2015` 这些预设，ES6生成器函数将始终被转换为复杂的ES5代码。
+`@babel/plugin-transform-runtime`本质就是个插件，它通过调用`babel`提供的接口，实现插入某些自定义功能，然后调用`@babel/runtime`执行编译。
 
-`.babelrc` 配置文件如下：
+首先，安装`@babel/plugin-transform-runtime`依赖，命令如下：
 
 ```
-"presets": [
+yarn add @babel/plugin-transform-runtme --dev
+```
+
+然后，在配置文件`.babelrc`中使用它，代码如下：
+
+```
+{
+  ...
+  "plugins": [
     [
-      "env",
+      "@babel/plugin-transform-runtime",
       {
-        "targets": {
-          "browsers": ["last 2 versions", "ie >= 7"]
-        }
+        "helpers": true, // 提取`babel`编译产生的公共的模块
+        "corejs": false, // 用来解决非实例化的方法API的转化，默认false
+        "regenerator": true, // 解决全局作用域被污染问题 // 默认true
+        "useESModules": false // 不使用`@babel/plugin-transform-modules-commonjs`对模块的引入方式进行转换，默认为fasle
       }
     ]
   ]
-```
-
-支持最近两个版本的浏览器和IE7以上的浏览器。
-
-### 其它babel插件
-
-`babel-plugin-tranform-classes` // 解决ES6类（class）的兼容性
-
-### 使用实践
-
-#### `babel-core`，`babel-preset-es2015`，`babel-polyfill`， 
-
-首先，`.babelrc` 代码如下：
-
-```
-{
-	"presets": ["es2015"]
 }
 ```
 
-然后，修改 `webpack.config.js` 代码如下：
+为了解决`ES`中`API`转换的问题，一般情况下，需要引入`@babel/polyfill`，安装命令如下：
 
 ```
+yarn add @babel/polyfill --dev
+```
+
+然后，在`webpack.config.js`中全局引入，如下代码所示：
+
+```
+...
 entry: {
-    app: ['babel-polyfill', './main.js']
+  ...
+  lib: ['@babel/polyfill']
 },
+...
+plugins: [
+  new HtmlWebpackPlugin({
+    chunks: ['lib', 'commons', 'vendor', 'A']
+  }),
+]
 ```
 
-`babel-polyfill` 还有其他的引入方式
+这里要介绍[`@babel/runtime-corejs2`](https://babeljs.io/docs/en/babel-runtime-corejs2)，它和`@babel/polyfill`一样使用`core-js`，但是使用它可以不用再担心（如：`Set`等）非实例方法的使用。
 
-#### `babel-core`，`babel-preset-es2015`，`babel-transform-runtime`
+安装`@babel/runtime-corejs2`依赖，命令如下：
 
-
-仅需要修改 `.babelrc` 代码如下：
 
 ```
+yarn add @babel/runtime-corejs2 --dev
+```
+
+启用这个功能，需要设置`@babel/plugin-transform-runtime`的配置项`corejs`的值为`2`，默认值为`false`（它的意思使不启用该功能），配置如下：
+
+```
+...
 {
-	"presets": ["es2015"],
-	"plugins": ["transform-runtime"]
+  "helpers": true, // 提取`babel`编译产生的公共的模块
+  "corejs": 2, // 用来解决非实例化的方法API的转化，默认false
+  "regenerator": true, // 解决全局作用域被污染问题 // 默认true
+  "useESModules": false // 不使用`@babel/plugin-transform-modules-commonjs`对模块的引入方式进行转换，默认为fasle
+}
+...
+```
+
+如果要解决实例化方法的API问题，可以直接应用`core-js`，而不必安装`@babel/polyfill`或`core-js`。
+
+修改`chunks/a1.js`代码如下：
+
+```
+var _ = require('lodash');
+var includes = require('core-js/fn/array/includes');
+var Set = require('core-js/fn/set');
+
+module.exports = function() {
+	var arr = ['a', 'b'];
+	console.log('this a module of a1', _.join(arr, '~'));
+	console.log(arr.includes('b'));
+	var set = new Set();
+	document.body.style.fontSize = '36px';
+	document.write('hello world.');
 }
 ```
 
-#### `babel-core`，`babel-preset-es2015`，`babel-transform-runtime`, `babel-preset-stage-*`,
+为什么必须要`var Set = require('core-js/fn/set');`这个代码才可以，因为`@babel/runtime-corejs2`只支持`import`这种写法。所以，这里要特别注意。
 
-使用 `babel-preset-stage-*` ，我们就是想使用一些更新的js特性，以 `babel-preset-stage-2` 为例：
+## 构建信息分析
 
-仅需要修改 `.babelrc` 代码如下：
-
-```
-{
-	"presets": ["es2015", "stage-2"],
-	"plugins": ["transform-runtime"]
-}
-```
-
-#### `babel-core`，`babel-preset-es2015`，`babel-transform-runtime`, `babel-preset-env`
-
-给我们的项目指定支持的浏览器和运行环境。
-
-仅需要修改 `.babelrc` 代码如下：
+运行`npm run build`，构建信息如下：
 
 ```
-{
-	"presets": ["es2015"],
-	"plugins": ["transform-runtime"].
-	"env": {
-		"targets": {
-			"browsers": ["last 2 versions", "safari >= 7"], // 浏览器
-			"node": "6.10" // node 
-		}
-	}
-}
+Hash: 983c15390adcdda13f0d
+Version: webpack 4.28.4
+Time: 11909ms
+Built at: 2019-01-17 22:50:54
+                              Asset       Size  Chunks             Chunk Names
+         A.983c15390adcdda13f0d.css  199 bytes       2  [emitted]  A
+     A.983c15390adcdda13f0d.css.map  397 bytes       2  [emitted]  A
+          A.983c15390adcdda13f0d.js   1.55 KiB       2  [emitted]  A
+      A.983c15390adcdda13f0d.js.map   5.33 KiB       2  [emitted]  A
+          B.983c15390adcdda13f0d.js    1.6 KiB       3  [emitted]  B
+      B.983c15390adcdda13f0d.js.map   5.33 KiB       3  [emitted]  B
+          C.983c15390adcdda13f0d.js   1.61 KiB       4  [emitted]  C
+      C.983c15390adcdda13f0d.js.map   5.33 KiB       4  [emitted]  C
+    commons.983c15390adcdda13f0d.js  429 bytes       0  [emitted]  commons
+commons.983c15390adcdda13f0d.js.map  225 bytes       0  [emitted]  commons
+                         index.html  410 bytes          [emitted]
+     vendor.983c15390adcdda13f0d.js   85.9 KiB       1  [emitted]  vendor
+ vendor.983c15390adcdda13f0d.js.map    545 KiB       1  [emitted]  vendor
 ```
 
-你可能发现这里没有介绍 `babel-cli`, `babel-register` 和babel插件，解释一下，这里主要是为了webpack的使用进行的介绍，如果有很多人需要的话可以在做介绍。
+可以发现，虽然我们自己写的代码比较少，但构建输出的文件则比较大。
 
-下一篇babel的文章我会介绍，如何在webpack中使用 `babel-eslint` 。
+解决这个问题，可参考[webapck实现最小化构建输出](https://github.com/lvzhenbang/webpack-play#webapck%E5%AE%9E%E7%8E%B0%E6%9C%80%E5%B0%8F%E5%8C%96%E6%9E%84%E5%BB%BA%E8%BE%93%E5%87%BA)。
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-11)
-
-参考资料:
-
-[babel-preset-env: a preset that configures Babel for you](http://2ality.com/2017/02/babel-preset-env.html)
-[babel-preset-env from npmjs.com ](https://www.npmjs.com/package/babel-preset-env)
-[babel中文参考手册](https://github.com/thejameskyle/babel-handbook/blob/master/translations/zh-Hans/user-handbook.md)
-
-其它关于webpack的系列文章[webpack-learning](https://github.com/lvzhenbang/webpack-learning)

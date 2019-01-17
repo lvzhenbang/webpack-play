@@ -1,20 +1,24 @@
-## 打包实践（babel-loader）
+## 打包实践 (babel-loader) 
 
 ### 主要内容
 
-讲解了如何使用babel将项目的代码编译为可以支持更广泛运行环境（浏览器，node）的代码。
+使用`babel`实现`ES6+`到低版本`ES`的转换。
 
 具体说明请参考：
 
-[webpack 如何使用babel大揭秘](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/css=extend.md)
+* [babel-loader](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/babel-loader.md)
+* [babel](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/babel.md)
 
 ### 运行项目
 
 ```
-npm install 安装依赖
+yarn add // 安装依赖
 
-npm run test 打包编译
+npm run dev // 开发模式
+
+npm run build // 发布模式
 ```
+
 
 ### LICENSE
 
