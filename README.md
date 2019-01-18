@@ -64,6 +64,13 @@ css和js作为web开发的重要组成部分。
 * [WebpackDevServer](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
 * [nodemon](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/nodemon.md) // 用监视webpack.config.js的改变
 
+
+### webapck优化构建输出
+
+* 代码分离。可参考[code-splitting](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/code-splitting.md)
+
+* tree-shaking。
+
 #### webapck实现最小化构建输出
 
 * 提取构建输出文件的公共代码；webpack4.x之前版本可参考[CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/commonschunkplugin.md)篇文章，webpack4.x可参考[SplitChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/splitchunkplugin.md)这篇文章
