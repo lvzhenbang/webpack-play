@@ -1,0 +1,1 @@
+{"version":3,"file":"0.12f421b51c2cb9ea3148.js","sources":["webpack:///./chunks/a4.js"],"sourcesContent":["export function info () {\r\n\tconsole.log('this a module of a4');\r\n}\r\nexport function add (a, b) {\r\n\treturn a + b;\r\n}"],"mappings":"AAAA","sourceRoot":""}
