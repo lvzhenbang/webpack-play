@@ -37,7 +37,7 @@
 css和js作为web开发的重要组成部分。
 
 * 有一个`babel`可以实现ES（JavaScript标准）新语法特性转换到指定语法特性；可参考[babel](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/babel.md)这篇文章。
-* 有一个`postCss`也可以实现css样式的转换。
+* 有一个`postCss`也可以实现css样式的转换。可参考[postcss](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/postcss.md)
 
 #### 函数化编程
 
@@ -80,8 +80,12 @@ css和js作为web开发的重要组成部分。
 * 移除第三方库中未使用的js代码块。 可参考[babel-plguin-lodash & LodashWebpackPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/lodash-webpack-plugin.md)这篇文章；
 * 移除项目未使用的css代码块。可参考[webapck4.x 移除构建输出的`*.css`文件中，未使用的css选择器](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/purify-css.md)这篇文章。
 
-
 </details>
+
+### 开发模式与效率
+
+* [判断是那种开发模式——环境变量](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/enviroment.md)
+
 
 ### 常用loader
 
@@ -93,6 +97,7 @@ css和js作为web开发的重要组成部分。
 * [file-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/file-loader.md)
 * [css扩展语言loader，如：sass, less, stylus等](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/css-extend.md)
 * [babel-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/babel-loader.md)
+* [postcss-loader](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/postcss-loader.md)
 
 </details>
 
