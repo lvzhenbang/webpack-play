@@ -16,3 +16,15 @@
 解决方案：
 
 在一个模块中只是用一种模块引入方式`import`和`require`二选一。
+
+### 问题：`Invalid Host/Origin Header`
+
+问题描述：用`webpack-dev-server`启动应用，会在控制台不间断的提示这个警告。`v3.1.11` 到 `v3.1.14` 都会出现这个问题。
+
+解决方案：
+
+最简单的就是升级`webpack-dev-server`的版本。
+
+可参考官方对这个[问题](https://github.com/webpack/webpack-dev-server/issues/1604)的讨论。
+
+注：这个问题突然间就出现了，代码未修改，上午还没事儿，下午问题直接就出现了。
