@@ -1,0 +1,25 @@
+@import url(https://github.com/twbs/bootstrap/blob/v4-dev/dist/css/bootstrap-reboot.css);
+
+h1 {
+  color: white;
+}
+h1 {
+  font-size: 48px;
+}
+body {
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8))
+}
+h1 {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%)
+}
+
+.banner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/*# sourceMappingURL=A.css.map*/

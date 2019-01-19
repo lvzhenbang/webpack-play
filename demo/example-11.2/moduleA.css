@@ -1,0 +1,13 @@
+@import './chunks/a.css';
+@import './chunks/b.css';
+
+body {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8))
+}
+h1 {
+  transform: translateX(50%)
+}
+
+.banner {
+  display: flex;
+}
