@@ -6,16 +6,16 @@
 
 具体说明请参考：
 
-[third-party](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/third-party.md)
+[third-party](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/third-party.md)
 
 ### 运行项目
 
 ```
 yarn // 安装依赖
 
-npm run test // 第一种nodemon方式
+npm run test // 开发模式
 
-npm run test2 // 第二种使用nodemon方式
+npm run build // 生产模式
 ```
 
 
