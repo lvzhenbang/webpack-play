@@ -4,9 +4,12 @@
 
 讲解了如何实现`PWA`功能。
 
+示例演示：[webpack4.x-multi-page](https://lvzhenbang.github.io/webpack4.x-multi-page/dist/)
+
 具体说明请参考：
 
 [pwa](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/workbox.md)
+
 
 ### 运行项目
 
