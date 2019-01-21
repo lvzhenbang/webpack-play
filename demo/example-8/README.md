@@ -2,7 +2,7 @@
 
 ### 主要内容
 
-讲解了如何实现`PWA`功能。
+讲解了如何实现`PWA`功能，如何使用`manifest.json`创建桌面图标。
 
 示例演示：[webpack4.x-multi-page](https://lvzhenbang.github.io/webpack4.x-multi-page/dist/)
 

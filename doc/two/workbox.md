@@ -2,6 +2,8 @@
 
 `PWA`带来的高用户体验（快速，集成，可靠，引人入胜，简称`FIRE`），备受关注。
 
+注：实现`App cache`类似的功能。
+
 如果说`PWA`是一个概念的话，那么[`workbox`](https://github.com/GoogleChrome/workbox)无异是一个成熟的解决方案。
 
 
@@ -69,14 +71,16 @@ yarn add workbox-webpack-plugin --dev
 
 ```
 ...
-const { GenerateSW } = require('workbox-webpack-plugin');
+const Workbox = require('workbox-webpack-plugin');
 
 ...
 module.exports = {
 	...
 	plugins: [
 		...
-		new GenerateSW()
+		new Workbox.GenerateSW({
+
+		})
 	]
 ...
 
@@ -134,12 +138,40 @@ app.js:9206 Yay! Workbox is loaded 🎉. [object ServiceWorkerRegistration]
 * `options.skipWaiting`：当`options.clientsClaim`的值为`true`时，是否跳过等待阶段（新的安装`Service Workers`线程后，旧的`Service Workers`线程将延迟激活，直到新的`Service Workers`线程不再控制任何客户端）。
 * `options.globPatterns`：它匹配`客户端`需要`预缓存`的文件，如：[ 'dist/*.{js,png,html,css}' ]，webpack内部可控制。
 * `options.globDirectory`：它补充`options.globPatterns`未匹配的文件，但是项目仍需要缓存的文件。webpack之外不可控制。
+* `options.importWorkboxFrom`：它用来指定是使用本地的`local`，还是google `cdn`。
 
 注：`options.globPatterns` 和 `options.globDirectory` 在v3.x后移除了。
+注：使用`Workbox.GenerateSw`默认使用`google cdn's workbox`，这样做有好处，但是众所周知（google需要翻墙），所以要使用本地的`workbox`。但这里有一个问题`importScripts()`问题，可参考[`replace importScripts with inline scripts for compatibility?`](https://github.com/GoogleChrome/workbox/issues/1331)这个问题的解决方案。个人采用`Workbox.InjectSW()`。
 
-### 注意事项
+> 注意事项
 
 1. `Service Workers`只能在`HTTPS`或者`localhost`环境下才可以起作用（反之http下的`Service Workers`的劫持和注入）。
 2. `Service Workers`的`service-worker.js`或者自定义的`sw.js`等文件限制了它`fetch`预缓存（`precache.**.js`）的范围。如果在根目录下，则可以获取所有有效的预缓存文件，如果在某一个目录下，只能获取该目录下有效的预缓存文件。
+
+注：`options.importWorkboxFrom`可以实现本地应用`workbox`。
+
+这样就可以实现`PwA`。
+
+### 创建桌面图标
+
+`创建桌面图标`需要使用`manifest.json`，这个文件可以在`Service Workers`启动的情况下实现，为手机端的用户提供一个`创建桌面图标`的弹出窗口。当打开`web app`时会出现。
+
+常用的配置项：
+
+* `name`：应用的名字；
+* `descripttion`：应用的描述；
+* `short_name`：生成桌面图标后，图标下方的名字；（必须）
+* `icons`：生成桌面图标后，所使用的图片，这是一个数组值，可以添加多个，但是`size`为`144X144`是必须的；（必须）
+* `start_url`：应用启动的路径；（必须）
+* `display`：显示方式；
+* `scope`：`manifest.json`的作用范围
+* `related_applications`: 相关联的app，参数`platform`，指定app所在的平台，如：`play`，参数`url`，指定app的地址，`id`指定app所在平台给的`ID`；
+* `lang`：语言
+* `dir`：文字的渲染方向
+* `orientation`：应用启动后，默认是横屏还是竖屏
+* `tehme_color`: 主题颜色
+* `background_color`：背景颜色
+
+注：其他可参考[MDN](https://developer.mozilla.org/zh-CN/docs/Web/Manifest)。
 
 [参考源码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-18)

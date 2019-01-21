@@ -37,13 +37,13 @@ module.exports = {
             from: path.join(__dirname, 'static'),
             to: path.join(__dirname, 'dist')
         }]),
+        new Workbox.InjectManifest({
+            swSrc: 'workbox-v3.6.3/workbox-sw.js'
+        }),
         new Workbox.GenerateSW({
             clientsClaim: true,
             skipWaiting: true,
-            globDirectory: 'dist',
-            globPatterns: [
-                '**/*.{html,css,js,json}',
-            ],
+            importWorkboxFrom: 'local'
         })
     ]
 }
