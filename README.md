@@ -60,10 +60,14 @@ css和js作为web开发的重要组成部分。
 
 #### 辅助开发工具
 
+<details>
+<summary>目录</summary>
+
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
 * [WebpackDevServer](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
 * [nodemon](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/nodemon.md) // 用监视webpack.config.js的改变
 
+</details>
 
 ### webapck优化构建输出
 
@@ -72,6 +76,9 @@ css和js作为web开发的重要组成部分。
 * tree-shaking。
 
 #### webapck实现最小化构建输出
+
+<details>
+<summary>目录</summary>
 
 * 提取构建输出文件的公共代码；webpack4.x之前版本可参考[CommonsChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/commonschunkplugin.md)篇文章，webpack4.x可参考[SplitChunkPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/splitchunkplugin.md)这篇文章
 * 可以从压缩`构建输出文件`（主要指css，js）。webpack4.x之前版本，webapck4.x可参考[webapck4.x 压缩构建输出](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/compress.md)这篇文章；
@@ -86,6 +93,9 @@ css和js作为web开发的重要组成部分。
 
 * [判断是那种开发模式——环境变量](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/enviroment.md)
 
+### `Webpack` 与 `PWA`
+
+[`Service Workers` 与 `workbox`](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/workbox.md)
 
 ### 常用loader
 
