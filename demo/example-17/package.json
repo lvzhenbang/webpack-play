@@ -1,0 +1,42 @@
+{
+  "name": "minicssextracplugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "webpack --env production",
+    "stats:dev": "webpack --env development --json > stats.json",
+    "stats:build": "webpack --env production --json > stats.json",
+    "stats": "webpack-bundle-analyzer stats.json"
+  },
+  "keywords": [
+    "webpack",
+    "demo"
+  ],
+  "author": "lvzhenbang",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-lodash": "^3.3.4",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "lodash-webpack-plugin": "^0.11.5",
+    "mini-css-extract-plugin": "^0.5.0",
+    "nodemon": "^1.18.9",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.1",
+    "webpack": "^4.28.4",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}

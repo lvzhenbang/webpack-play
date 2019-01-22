@@ -71,9 +71,16 @@ css和js作为web开发的重要组成部分。
 
 ### webapck优化构建输出
 
+当你需要对`构建输出`的大小进行优化时，可以从如下两个方面入手：
+
+* 构建输出都包含哪些文件，这些文件都使用了哪些源文件；可参考[webpack-bundle-analysis](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/webpack-bundle-analysis.md)
+* 针对不同的类型的文件，可以使用哪些技术。可参考[`webapck实现最小化构建输出`](https://github.com/lvzhenbang/webpack-play#webapck%E5%AE%9E%E7%8E%B0%E6%9C%80%E5%B0%8F%E5%8C%96%E6%9E%84%E5%BB%BA%E8%BE%93%E5%87%BA)部分的描述。
+
+#### webpack自己的
+
 * 代码分离。可参考[code-splitting](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/two/code-splitting.md)
 
-* tree-shaking。
+* tree-shaking。`require.sure`或`import`。
 
 #### webapck实现最小化构建输出
 
