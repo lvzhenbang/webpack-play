@@ -161,6 +161,10 @@ module.exports = {
 
 PostCSS中我们也有一些常用的插件如 'autoprefixer'，'postcss-sprites'，以及 'cssnano' 插件。
 
+* `autoprefixer`: 为样式属性添加前缀，如：`border-radius` -> `-webkit-borer-radius`
+* `cssnano`: 压缩构建提取出来的样式文件
+* `postcss-sprites`: 将多个小图标合成为一张大图
+
 #### autoprefixer 
 
 可以给一些样式属性添加不同浏览器的前缀，如：transition。
