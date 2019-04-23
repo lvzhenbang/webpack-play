@@ -43,3 +43,11 @@
 ```
 
 输入`Y`，就行了。具体原因，请参考[`Microsoft doc`](https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6#set-a-different-execution-policy-for-one-session)
+
+### `url-loader` 无法处理`backgorund-iamge: url(...)`
+
+问题描述：在开发的过程中，有时会遇到因为路径的问题，造成`url-loader`无法处理`backgorund-iamge: url(...)`，如：特别是`/assets/imgs/index/logo.png`，它其实和``。
+
+解决方案：`/assets/imgs/index/logo.png`和`http://example.com/assets/imgs/index/logo.png`一样，都代表绝对路径，前者是省略了域名`http://example.com`的路径。而`css-loader`就把这种拥有完整路径的情况排除，就不会调用`url-loader`来处理`backgorund-iamge: url(...)`，所以你需要将那些你需要用`url-loader`处理的`backgorund-iamge: url(...)`改用相对路径即可。
+
+注：用`webpack`构建应用时，对于要用`webpack`的`loader`或`plugin`处理的静态资源文件，一律使用相对路径，而不用`webpack`处理的使用绝对路径（使用绝对路径可以避免开发的项目因为路径的问题发生串联，如：几个小项目合成一个大项目）。
