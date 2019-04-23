@@ -147,4 +147,4 @@ body {
 
 3. 随着css样式的增多，构建输出的js文件也会变得越来越大
 
-解决这个问题，可以使用(`extract-text-webpack-plugiin`](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/extract-text-webpack-plugin.md)
+解决这个问题，可以使用[`extract-text-webpack-plugiin`](https://github.com/lvzhenbang/webpack-learning/tree/master/doc/first/extract-text-webpack-plugin.md)
