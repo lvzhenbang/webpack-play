@@ -28,3 +28,18 @@
 可参考官方对这个[问题](https://github.com/webpack/webpack-dev-server/issues/1604)的讨论。
 
 注：这个问题突然间就出现了，代码未修改，上午还没事儿，下午问题直接就出现了。
+
+### `powsershell` 脚本无法运行
+
+问题描述：在使用`window powershell`是会遇脚本命令无法运行的问题。
+
+解决方案： 以管理员的身份打开`pwershell`，输入`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`，你会看到如下所示的信息：
+
+```
+执行策略更改
+执行策略可帮助你防止执行不信任的脚本。更改执行策略可能会产生安全风险，如 https:/go.microsoft.com/fwlink/?LinkID=135170
+中的 about_Execution_Policies 帮助主题所述。是否要更改执行策略?
+[Y] 是(Y)  [A] 全是(A)  [N] 否(N)  [L] 全否(L)  [S] 暂停(S)  [?] 帮助 (默认值为“N”):
+```
+
+输入`Y`，就行了。具体原因，请参考[`Microsoft doc`](https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6#set-a-different-execution-policy-for-one-session)
