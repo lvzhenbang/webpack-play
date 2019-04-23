@@ -151,4 +151,4 @@ index.html  179 bytes          [emitted]
 也可以设置`options.limit`的值为`81920`，也就是80kb，因为示例中的图片大小为`51.8kb`，字体为`5.51MB`。然后运行`npm run build`脚本命令（运行这个命令前现清空`./dist/`目录），结果为只有字体分离了出来。
 
 
-[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-2.2.md)
+[参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-2.2)
