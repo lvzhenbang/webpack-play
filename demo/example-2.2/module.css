@@ -6,6 +6,6 @@ body {
   background-color: red;
   color: white;
   font-size: 36px;
-  background: url(./bg.jpg) center center;
+  /* background: url(./bg.jpg) center center; */
   font-family: gb2312;
 }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "webpack-dev-server",
+    "dev": "webpack-dev-server",
     "build": "webpack"
   },
   "keywords": [

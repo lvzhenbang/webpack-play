@@ -13,7 +13,7 @@
 ```
 yarn  // 安装依赖
 
-npm run test // 开发模式
+npm run dev // 开发模式
 
 npm run build // 生产模式
 ```

@@ -20,7 +20,7 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 89120, // 8kb
+                            limit: 8912, // 8kb
                             name: '[name].[hash].[ext]'
                         }
                     }
@@ -32,7 +32,8 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 89120, // 8kb
+                            // limit: 89120, // 80kb
+                            limit: 8912, // 8kb
                             name: '[name].[hash].[ext]'
                         }
                     }
