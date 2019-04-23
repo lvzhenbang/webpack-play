@@ -150,5 +150,6 @@ index.html  179 bytes          [emitted]
 
 也可以设置`options.limit`的值为`81920`，也就是80kb，因为示例中的图片大小为`51.8kb`，字体为`5.51MB`。然后运行`npm run build`脚本命令（运行这个命令前现清空`./dist/`目录），结果为只有字体分离了出来。
 
+注：开发的过程可能遇到`url-loader`无效的问题，一个主要的原因就是使用了绝对路径，可参考[` issue `](https://github.com/lvzhenbang/webpack-play/blob/master/doc/other/issue.md#url-loader-%E6%97%A0%E6%B3%95%E5%A4%84%E7%90%86backgorund-iamge-url)
 
 [参考源代码](https://github.com/lvzhenbang/webpack-learning/tree/master/demo/example-2.2)
