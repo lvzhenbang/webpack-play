@@ -1,0 +1,26 @@
+{
+  "name": "nodemon",
+  "version": "1.0.0",
+  "description": "this is a example-19",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon",
+    "build": "webpack"
+  },
+  "keywords": [
+    "webpack",
+    "demo"
+  ],
+  "author": "lvzhenbang",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.28.8",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.9",
+    "style-loader": "^0.19.1",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "dependencies": {}
+}
