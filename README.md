@@ -32,12 +32,16 @@
 
 ### 进阶
 
-### 两前端个技术生态
+#### 两前端个技术生态
 
 css和js作为web开发的重要组成部分。
 
 * 有一个`babel`可以实现ES（JavaScript标准）新语法特性转换到指定语法特性；可参考[babel](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/babel.md)这篇文章。
 * 有一个`postCss`也可以实现css样式的转换。可参考[postcss](https://github.com/lvzhenbang/webpack-play/tree/master/doc/two/postcss.md)
+
+#### 使用typescript
+
+* 限制javascript的灵活性(数据类型)，从避免错误。[` 参考文档 `](https://basarat.gitbooks.io/typescript/content/docs/getting-started.html)，[` demo `](https://github.com/lvzhenbang/webpack-play/tree/master/demo/example-19)
 
 #### 函数化编程
 
