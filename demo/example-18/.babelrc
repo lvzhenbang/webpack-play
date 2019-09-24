@@ -1,0 +1,24 @@
+{
+  "presets": [
+      [
+          "@babel/preset-env",
+          {
+              "targets": {
+                  "chrome": "58",
+                  "ie": "8"
+              }
+          }
+      ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "helpers": true, // 提取`babel`编译产生的公共的模块
+        "corejs": 2, // 用来解决非实例化的方法API的转化，默认false
+        "regenerator": true, // 解决全局作用域被污染问题 // 默认true
+        "useESModules": false // 不使用`@babel/plugin-transform-modules-commonjs`对模块的引入方式进行转换，默认为fasle
+      }
+    ]
+  ]
+}
