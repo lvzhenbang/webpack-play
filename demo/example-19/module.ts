@@ -8,4 +8,9 @@ function hello (str: string) {
 module.exports = function() {
   // hello(123);
   hello('world!');
+
+  // const rObj = () => ({ "a": 1, "b": 2});
+  const rObj = () => { "a": 1, "b": 2}
+
+  console.log(rObj);
 }
