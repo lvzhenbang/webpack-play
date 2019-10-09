@@ -15,3 +15,7 @@ yarn add -g typescript@next
 ## 基本知识点
 
 * [` TypeScript Type System `](https://basarat.gitbooks.io/typescript/content/docs/types/type-system.html)
+
+## 第三方
+
+* [` @types `](https://github.com/DefinitelyTyped/DefinitelyTyped)
