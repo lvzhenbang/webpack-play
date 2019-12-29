@@ -73,6 +73,7 @@ css和js作为web开发的重要组成部分。
 * [HtmlWebapckPlugin](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
 * [WebpackDevServer](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
 * [nodemon](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/nodemon.md) // 用监视webpack.config.js的改变
+* [` clean-wepack-plugin `](https://github.com/johnagan/clean-webpack-plugin) // 当第二次执行编译输出时，若输出文件名中未带hash，默认会覆盖输出文件；反之则会生成新的文件。而是用` clean-webpack-plugin `则会删除上一次输出的文件，保留最新的webpack输出文件
 
 </details>
 
