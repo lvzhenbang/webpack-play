@@ -73,7 +73,6 @@ css和js作为web开发的重要组成部分。
 * [` HtmlWebapckPlugin `](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
 * [` WebpackDevServer `](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/webpack-dev-server.md) // 用webpack开发时启动浏览器
 * [` nodemon `](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/nodemon.md) // 用监视webpack.config.js的改变
-* [` clean-wepack-plugin `](https://github.com/johnagan/clean-webpack-plugin) // 当第二次执行编译输出时，若输出文件名中未带hash，默认会覆盖输出文件；反之则会生成新的文件。而是用` clean-webpack-plugin `则会删除上一次输出的文件，保留最新的webpack输出文件
 
 </details>
 
@@ -167,6 +166,7 @@ css和js作为web开发的重要组成部分。
 <summary>目录</summary>
 
 * [` CopyWebPackPlugin `](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/copy-webpack-plugin.md) // 拷贝静态文件到构建输出的 `dist/` 目录中
+* [` clean-wepack-plugin `](https://github.com/johnagan/clean-webpack-plugin) // 当第二次执行编译输出时，若输出文件名中未带hash，默认会覆盖输出文件；反之则会生成新的文件。而是用` clean-webpack-plugin `则会删除上一次输出的文件，保留最新的webpack输出文件
 * [` HtmlWebapckPlugin `](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/htmlwebpackplugin.md) // 用webpack生成HTML文件
 * [` ExtractTextWebpackPlugin `](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/extract-text-webpack-plugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x之前支持
 * [` MiniCssExtractPlugin `](https://github.com/lvzhenbang/webpack-play/tree/master/doc/first/minicssextractplugin.md) // 从打包生成的js文件分理处css到单独的文件。webpack4.x开始支持
