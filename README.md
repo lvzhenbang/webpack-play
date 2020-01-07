@@ -203,6 +203,9 @@ css和js作为web开发的重要组成部分。
 
 </details>
 
+### 学习资料
+
+* [` 深入浅出Webpack `](https://github.com/gwuhaolin/dive-into-webpack)
 
 ### LICENSE
 
